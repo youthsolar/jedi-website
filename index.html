@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>季達行銷公關 JEDI Marketing PR | Since 2003 — 品牌策略 · 媒體公關 · 整合行銷</title>
+<meta name="description" content="季達行銷公關 JEDI Marketing PR Co., Ltd. — 23年品牌策略、媒體公關、整合行銷經驗。服務超過 60 個品牌客戶，累計媒體預算逾 9,000 萬。">
+<meta name="keywords" content="季達,JEDI,行銷公關,品牌策略,媒體公關,整合行銷,AI新聞稿,PR,Marketing">
+<meta property="og:title" content="季達行銷公關 JEDI Marketing PR">
+<meta property="og:description" content="Since 2003 — 邏輯驅動的品牌傳播夥伴">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* ========================================
+   JEDI Marketing PR — Official Website 2026
+   Design System: UI/UX Pro Max Methodology
+   Palette: E-commerce Luxury (Dark + Gold)
+   Typography: Chinese Traditional (Noto Serif TC + Noto Sans TC)
+   Pattern: Scroll-Triggered Storytelling + Enterprise Gateway
+   CRAP: Contrast · Repetition · Alignment · Proximity
+   ======================================== */
+
+/* --- RESET & BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Color — Luxury Dark + Gold */
+  --c-ink: #1C1917;
+  --c-ink-80: #292524;
+  --c-ink-60: #44403C;
+  --c-ink-40: #78716C;
+  --c-ink-20: #A8A29E;
+  --c-surface: #FAFAF9;
+  --c-surface-dim: #F5F5F4;
+  --c-surface-dimmer: #E7E5E4;
+  --c-border: #D6D3D1;
+  --c-accent: #A16207;
+  --c-accent-light: #CA8A04;
+  --c-accent-soft: rgba(161,98,7,0.08);
+  --c-accent-warm: #D97706;
+  --c-dark: #1C1917;
+  --c-dark-soft: #292524;
+  --c-dark-mid: #44403C;
+
+  /* Typography Scale — 1.25 Major Third */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
+  --fs-4xl: 3.25rem;
+  --fs-5xl: 4rem;
+  --fs-6xl: 5rem;
+
+  /* Spacing — 4px base */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.25rem; --sp-6: 1.5rem; --sp-8: 2rem; --sp-10: 2.5rem;
+  --sp-12: 3rem; --sp-16: 4rem; --sp-20: 5rem; --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* Radius */
+  --r-sm: 4px; --r-md: 8px; --r-lg: 12px; --r-xl: 20px; --r-2xl: 28px; --r-full: 9999px;
+
+  /* Shadow — layered */
+  --shadow-sm: 0 1px 2px rgba(28,25,23,0.04);
+  --shadow-md: 0 4px 16px rgba(28,25,23,0.06), 0 1px 4px rgba(28,25,23,0.04);
+  --shadow-lg: 0 12px 40px rgba(28,25,23,0.08), 0 4px 12px rgba(28,25,23,0.04);
+  --shadow-xl: 0 24px 64px rgba(28,25,23,0.12), 0 8px 24px rgba(28,25,23,0.06);
+
+  /* Transition */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 150ms;
+  --t-normal: 300ms;
+  --t-slow: 500ms;
+
+  /* Layout */
+  --max-w: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'Noto Sans TC', 'Inter', -apple-system, system-ui, sans-serif;
+  color: var(--c-ink-60);
+  line-height: 1.75;
+  font-size: var(--fs-base);
+  background: var(--c-surface);
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* --- UTILITY --- */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
+.section-pad { padding: var(--sp-24) 0; }
+
+/* --- TYPOGRAPHY --- */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+
+.heading-1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(var(--fs-3xl), 7vw, var(--fs-6xl));
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  color: var(--c-ink);
+}
+
+.heading-2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(var(--fs-xl), 3.5vw, var(--fs-3xl));
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--c-ink);
+}
+
+.heading-3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--c-ink);
+}
+
+.body-lg { font-size: var(--fs-md); line-height: 1.85; color: var(--c-ink-60); }
+.body-sm { font-size: var(--fs-sm); line-height: 1.6; color: var(--c-ink-40); }
+.caption { font-size: var(--fs-xs); color: var(--c-ink-40); letter-spacing: 0.02em; }
+
+/* --- SECTION HEADER --- */
+.section-header { margin-bottom: var(--sp-16); }
+.section-header .line {
+  width: 32px; height: 2px;
+  background: var(--c-accent);
+  margin-bottom: var(--sp-6);
+}
+.section-header .sub {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-40);
+  margin-top: var(--sp-3);
+  max-width: 520px;
+}
+
+/* ============================
+   NAVIGATION
+   ============================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: var(--sp-4) 0;
+  background: rgba(28,25,23,0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transform: translateY(-100%);
+  transition: transform var(--t-normal) var(--ease-out);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav.visible { transform: translateY(0); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font-family: 'Noto Serif TC', serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  letter-spacing: 0.15em;
+}
+.nav-logo span { color: var(--c-accent-light); font-weight: 400; font-size: var(--fs-xs); margin-left: var(--sp-2); letter-spacing: 0.08em; }
+.nav-links { display: flex; gap: var(--sp-8); }
+.nav-links a {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  padding: var(--sp-2) 0;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 1px; background: var(--c-accent-light);
+  transform: scaleX(0); transition: transform var(--t-normal) var(--ease-out);
+}
+.nav-links a:hover { color: rgba(255,255,255,0.9); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-hamburger { display: none; color: #fff; font-size: 1.4rem; padding: var(--sp-2); }
+
+/* ============================
+   HERO — Full-viewport immersive
+   ============================ */
+.hero {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; align-items: center;
+  background: var(--c-dark);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 75% 50%, rgba(161,98,7,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 70% at 15% 60%, rgba(202,138,4,0.04) 0%, transparent 60%),
+    linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+}
+/* Noise texture */
+.hero::after {
+  content: ''; position: absolute; inset: 0; opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+.hero-content { position: relative; z-index: 1; width: 100%; }
+.hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); align-items: center; }
+.hero-text { max-width: 560px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-4);
+  border: 1px solid rgba(161,98,7,0.3);
+  border-radius: var(--r-full);
+  margin-bottom: var(--sp-6);
+}
+.hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent-light); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.hero h1 { color: #fff; margin-bottom: var(--sp-4); }
+.hero h1 .gold { color: var(--c-accent-light); }
+.hero .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-md);
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.12em;
+  margin-bottom: var(--sp-8);
+}
+.hero .desc {
+  font-size: var(--fs-base);
+  color: rgba(255,255,255,0.5);
+  line-height: 1.9;
+  max-width: 480px;
+}
+
+.hero-cta { display: flex; gap: var(--sp-4); margin-top: var(--sp-10); flex-wrap: wrap; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-8);
+  background: var(--c-accent);
+  color: #fff;
+  font-weight: 500; font-size: var(--fs-sm);
+  border-radius: var(--r-full);
+  transition: all var(--t-normal) var(--ease-out);
+  letter-spacing: 0.04em;
+}
+.btn-primary:hover { background: var(--c-accent-warm); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(161,98,7,0.4); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-8);
+  color: rgba(255,255,255,0.6);
+  font-weight: 400; font-size: var(--fs-sm);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-full);
+  transition: all var(--t-normal) var(--ease-out);
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.35); color: #fff; }
+
+/* Hero right — key metrics */
+.hero-metrics {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6);
+}
+.hero-metric {
+  padding: var(--sp-6);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--r-lg);
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px);
+}
+.hero-metric .num {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.hero-metric .num span { color: var(--c-accent-light); font-size: 0.5em; }
+.hero-metric .label {
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.35);
+  margin-top: var(--sp-2);
+  letter-spacing: 0.04em;
+}
+
+.scroll-hint {
+  position: absolute; bottom: var(--sp-8); left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.2);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ============================
+   STORY BAND — Narrative intro
+   ============================ */
+.story-band {
+  background: var(--c-dark);
+  padding: var(--sp-20) 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.story-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+.story-band blockquote {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(var(--fs-lg), 2.5vw, var(--fs-2xl));
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+.story-band blockquote .highlight {
+  color: var(--c-accent-light);
+  font-weight: 600;
+}
+.story-band .attribution {
+  margin-top: var(--sp-6);
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.06em;
+}
+
+/* ============================
+   ABOUT
+   ============================ */
+.about { background: var(--c-surface); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); align-items: start; }
+.about-prose p { margin-bottom: var(--sp-6); }
+
+.framework-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-8);
+  margin-bottom: var(--sp-6);
+  transition: box-shadow var(--t-normal) var(--ease-out);
+}
+.framework-card:hover { box-shadow: var(--shadow-md); }
+.framework-label {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-weight: 600; font-size: var(--fs-sm); margin-bottom: var(--sp-4);
+}
+.framework-label .dot { width: 8px; height: 8px; border-radius: 50%; }
+.framework-list { list-style: none; padding: 0; }
+.framework-list li {
+  font-size: var(--fs-sm); color: var(--c-ink-60);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--c-surface-dimmer);
+}
+.framework-list li:last-child { border: none; }
+
+.media-model { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+.media-model-item {
+  padding: var(--sp-4);
+  border-radius: var(--r-md);
+  text-align: center;
+}
+.media-model-item .label { font-weight: 600; font-size: var(--fs-sm); margin-bottom: var(--sp-1); }
+.media-model-item .metrics { font-size: var(--fs-xs); color: var(--c-ink-40); }
+
+/* ============================
+   SERVICES
+   ============================ */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+.svc-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-8);
+  transition: all var(--t-normal) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+.svc-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: transparent;
+  transition: background var(--t-normal);
+}
+.svc-card:hover {
+  border-color: var(--c-ink-20);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.svc-card:hover::before { background: var(--c-accent); }
+
+.svc-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--r-md);
+  display: grid; place-items: center;
+  font-size: 1.3rem;
+  margin-bottom: var(--sp-5);
+}
+.svc-card h3 { margin-bottom: var(--sp-3); }
+.svc-card p { font-size: var(--fs-sm); color: var(--c-ink-40); line-height: 1.7; }
+
+.svc-featured {
+  border-color: var(--c-accent);
+  border-width: 2px;
+  background: linear-gradient(180deg, rgba(161,98,7,0.03) 0%, var(--c-surface) 100%);
+}
+.svc-featured::before { background: var(--c-accent); }
+.svc-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-accent);
+  background: var(--c-accent-soft);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  margin-left: var(--sp-2);
+  vertical-align: middle;
+}
+
+/* --- Media Highlight Dark Banner --- */
+.media-hl {
+  background: var(--c-dark);
+  border-radius: var(--r-xl);
+  padding: var(--sp-12);
+  margin: var(--sp-12) 0;
+  color: #fff;
+}
+.media-hl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-10); margin-top: var(--sp-10); }
+.media-hl-val {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-2xl); font-weight: 700;
+  color: var(--c-accent-light);
+  line-height: 1;
+}
+.media-hl-label { font-size: var(--fs-sm); color: rgba(255,255,255,0.65); margin-top: var(--sp-2); }
+.media-hl-sub { font-size: var(--fs-xs); color: rgba(255,255,255,0.3); margin-top: var(--sp-1); }
+
+/* ============================
+   CASES
+   ============================ */
+.cases { background: var(--c-surface-dim); }
+
+.filter-bar { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-10); }
+.filter-btn {
+  padding: var(--sp-2) var(--sp-5);
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm); font-weight: 400;
+  color: var(--c-ink-40);
+  border: 1px solid transparent;
+  background: var(--c-surface);
+  transition: all var(--t-fast);
+}
+.filter-btn:hover { color: var(--c-ink-60); border-color: var(--c-border); }
+.filter-btn.active {
+  background: var(--c-dark);
+  color: #fff;
+  border-color: var(--c-dark);
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--sp-6);
+}
+
+.case-card {
+  background: var(--c-surface);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  transition: all var(--t-normal) var(--ease-out);
+  cursor: pointer;
+}
+.case-card:hover {
+  border-color: var(--c-ink-20);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+}
+.case-img {
+  width: 100%; height: 220px; object-fit: cover;
+  transition: transform var(--t-slow) var(--ease-out);
+}
+.case-card:hover .case-img { transform: scale(1.05); }
+.case-img-wrap { overflow: hidden; position: relative; }
+.case-tag {
+  position: absolute; bottom: var(--sp-3); left: var(--sp-3);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-full);
+  font-size: var(--fs-xs); font-weight: 500;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.case-body { padding: var(--sp-5) var(--sp-6) var(--sp-6); }
+.case-body h3 { font-family: 'Noto Serif TC', serif; font-size: var(--fs-base); font-weight: 600; color: var(--c-ink); margin-bottom: var(--sp-1); }
+.case-meta { font-size: var(--fs-xs); color: var(--c-ink-20); margin-bottom: var(--sp-3); }
+.case-desc { font-size: var(--fs-sm); color: var(--c-ink-40); line-height: 1.65; }
+
+/* ============================
+   CLIENTS
+   ============================ */
+.client-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.12em;
+  color: var(--c-ink-20); margin-bottom: var(--sp-4);
+  text-transform: uppercase;
+}
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-10);
+}
+.client-chip {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-xs);
+  color: var(--c-ink-60);
+  text-align: center;
+  transition: all var(--t-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.client-chip:hover {
+  background: var(--c-surface);
+  border-color: var(--c-accent);
+  color: var(--c-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================
+   TIMELINE
+   ============================ */
+.timeline-section { background: var(--c-dark); }
+.timeline-header { text-align: center; margin-bottom: var(--sp-16); }
+.timeline-header .heading-2 { color: #fff; }
+.timeline-header .sub { color: rgba(255,255,255,0.35); margin: var(--sp-3) auto 0; }
+.timeline-header .line { background: var(--c-accent-light); margin: 0 auto var(--sp-6); }
+
+.timeline-track {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.08);
+  transform: translateX(-50%);
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-8);
+  margin-bottom: var(--sp-10);
+  position: relative;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 8px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--c-accent-light);
+  transform: translateX(-50%);
+  border: 2px solid var(--c-dark);
+  z-index: 2;
+}
+.tl-year {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--c-accent-light);
+  text-align: right;
+  padding-right: var(--sp-8);
+}
+.tl-content {
+  padding-left: var(--sp-8);
+}
+.tl-content h4 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: var(--sp-1);
+}
+.tl-content p {
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+}
+
+/* ============================
+   TEAM
+   ============================ */
+.team { background: var(--c-surface-dim); }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-8); }
+.team-card {
+  text-align: center;
+  padding: var(--sp-8) var(--sp-4);
+  border-radius: var(--r-lg);
+  transition: all var(--t-normal) var(--ease-out);
+}
+.team-card:hover { background: var(--c-surface); box-shadow: var(--shadow-md); }
+.team-avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff; font-weight: 600; font-size: var(--fs-lg);
+  margin: 0 auto var(--sp-5);
+  font-family: 'Inter', sans-serif;
+}
+.team-card h4 { font-family: 'Noto Serif TC', serif; font-size: var(--fs-sm); font-weight: 600; color: var(--c-ink); }
+.team-card .role { font-size: var(--fs-xs); color: var(--c-accent); margin-top: var(--sp-1); font-weight: 500; }
+.team-card .spec { font-size: var(--fs-xs); color: var(--c-ink-40); margin-top: var(--sp-2); line-height: 1.5; }
+
+/* ============================
+   CONTACT
+   ============================ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); align-items: start; }
+.contact-info { list-style: none; padding: 0; }
+.contact-info li { margin-bottom: var(--sp-6); }
+.contact-info .label {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-xs); font-weight: 600;
+  color: var(--c-ink-20);
+  margin-bottom: var(--sp-1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.contact-info .value { font-size: var(--fs-base); color: var(--c-ink-60); }
+
+.contact-cta-card {
+  background: linear-gradient(135deg, var(--c-dark) 0%, var(--c-dark-mid) 100%);
+  border-radius: var(--r-xl);
+  padding: var(--sp-10);
+  color: #fff;
+}
+.contact-cta-card h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin-bottom: var(--sp-4);
+}
+.contact-cta-card p {
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.5);
+  line-height: 1.8;
+  margin-bottom: var(--sp-8);
+}
+.btn-gold {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-8);
+  background: var(--c-accent);
+  color: #fff;
+  font-weight: 500; font-size: var(--fs-sm);
+  border-radius: var(--r-full);
+  transition: all var(--t-normal) var(--ease-out);
+}
+.btn-gold:hover { background: var(--c-accent-warm); box-shadow: 0 8px 24px rgba(161,98,7,0.35); }
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer {
+  background: var(--c-dark);
+  padding: var(--sp-12) 0 var(--sp-8);
+}
+.footer-inner {
+  display: flex; justify-content: space-between; align-items: start;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: var(--sp-8);
+}
+.footer-brand {
+  font-family: 'Noto Serif TC', serif;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--sp-2);
+}
+.footer-sub { font-size: var(--fs-xs); color: rgba(255,255,255,0.25); line-height: 1.6; }
+.footer-copy { font-size: var(--fs-xs); color: rgba(255,255,255,0.2); text-align: right; }
+
+/* ============================
+   MODAL
+   ============================ */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(28,25,23,0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--sp-6);
+  opacity: 0; pointer-events: none;
+  transition: opacity var(--t-normal) var(--ease-out);
+}
+.modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+.modal {
+  background: var(--c-surface);
+  border-radius: var(--r-2xl);
+  max-width: 720px; width: 100%;
+  max-height: 88vh; overflow-y: auto;
+  position: relative;
+  transform: translateY(20px) scale(0.97);
+  transition: transform var(--t-normal) var(--ease-out);
+  box-shadow: var(--shadow-xl);
+}
+.modal-overlay.active .modal { transform: translateY(0) scale(1); }
+
+.modal-close {
+  position: absolute; top: var(--sp-4); right: var(--sp-4); z-index: 10;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  display: grid; place-items: center;
+  font-size: var(--fs-lg); color: var(--c-ink-60);
+  transition: all var(--t-fast);
+  box-shadow: var(--shadow-sm);
+}
+.modal-close:hover { background: #fff; color: var(--c-ink); box-shadow: var(--shadow-md); }
+
+.modal-hero-img {
+  width: 100%; height: 300px; object-fit: cover;
+  border-radius: var(--r-2xl) var(--r-2xl) 0 0;
+}
+.modal-body { padding: var(--sp-8) var(--sp-10) var(--sp-10); }
+.modal-body .meta { font-size: var(--fs-sm); color: var(--c-ink-20); margin-bottom: var(--sp-2); }
+.modal-body h2 { font-family: 'Noto Serif TC', serif; font-size: var(--fs-xl); font-weight: 700; color: var(--c-ink); margin-bottom: var(--sp-2); }
+.modal-body .type-badge {
+  display: inline-block;
+  font-size: var(--fs-xs); color: var(--c-accent);
+  padding: var(--sp-1) var(--sp-3);
+  border: 1px solid var(--c-accent-soft);
+  background: var(--c-accent-soft);
+  border-radius: var(--r-full);
+  margin-bottom: var(--sp-6);
+  font-weight: 500;
+}
+.modal-body .desc { font-size: var(--fs-sm); color: var(--c-ink-60); line-height: 1.85; margin-bottom: var(--sp-6); }
+.modal-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--sp-3); margin-bottom: var(--sp-6); }
+.modal-stat {
+  background: var(--c-surface-dim);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  text-align: center;
+}
+.modal-stat .val { font-family: 'Inter', sans-serif; font-weight: 600; font-size: var(--fs-base); color: var(--c-ink); }
+.modal-stat .label { font-size: var(--fs-xs); color: var(--c-ink-40); margin-top: var(--sp-1); }
+.modal-highlight {
+  background: var(--c-surface-dim);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+  border-left: 3px solid var(--c-accent);
+}
+.modal-highlight .hl-label { font-size: var(--fs-xs); font-weight: 600; color: var(--c-accent); margin-bottom: var(--sp-2); letter-spacing: 0.06em; text-transform: uppercase; }
+.modal-highlight p { font-size: var(--fs-sm); color: var(--c-ink-60); line-height: 1.75; }
+
+/* ============================
+   SCROLL ANIMATION
+   ============================ */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 100ms; }
+.reveal-d2 { transition-delay: 200ms; }
+.reveal-d3 { transition-delay: 300ms; }
+
+/* ============================
+   MOBILE MENU
+   ============================ */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 150;
+  background: rgba(28,25,23,0.97);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: var(--sp-8);
+  opacity: 0; pointer-events: none;
+  transition: opacity var(--t-normal);
+}
+.mobile-menu.active { opacity: 1; pointer-events: auto; }
+.mobile-menu a {
+  font-family: 'Noto Serif TC', serif;
+  color: #fff;
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.mobile-menu a:hover { color: var(--c-accent-light); }
+.mobile-close { position: absolute; top: var(--sp-6); right: var(--sp-6); color: #fff; font-size: 2rem; }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 1024px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); margin-top: var(--sp-10); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .media-hl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero-metrics { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .media-hl-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .cases-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .modal-body { padding: var(--sp-6); }
+  .modal-hero-img { height: 200px; }
+  .footer-inner { flex-direction: column; gap: var(--sp-6); }
+  .footer-copy { text-align: left; }
+  .tl-item { grid-template-columns: auto 1fr; gap: var(--sp-4); }
+  .tl-item::before { left: 0; transform: none; }
+  .timeline-track::before { left: 4px; }
+  .tl-year { text-align: left; padding-right: 0; font-size: var(--fs-base); min-width: 90px; }
+  .tl-content { padding-left: 0; }
+}
+@media (max-width: 480px) {
+  .hero-cta { flex-direction: column; }
+  .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+  .hero-metrics { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" id="mainNav">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">JEDI <span>Marketing PR</span></a>
+    <div class="nav-links">
+      <a href="#about">關於我們</a>
+      <a href="#services">服務項目</a>
+      <a href="#cases">精選案例</a>
+      <a href="#clients">客戶名錄</a>
+      <a href="#timeline">公司沿革</a>
+      <a href="#team">團隊</a>
+      <a href="#contact">聯絡方式</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close">&times;</button>
+  <a href="#about" onclick="toggleMenu()">關於我們</a>
+  <a href="#services" onclick="toggleMenu()">服務項目</a>
+  <a href="#cases" onclick="toggleMenu()">精選案例</a>
+  <a href="#clients" onclick="toggleMenu()">客戶名錄</a>
+  <a href="#timeline" onclick="toggleMenu()">公司沿革</a>
+  <a href="#team" onclick="toggleMenu()">團隊</a>
+  <a href="#contact" onclick="toggleMenu()">聯絡方式</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="hero">
+  <div class="container hero-content">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span class="eyebrow">Since 2003</span>
+        </div>
+        <h1 class="heading-1">季達<br>行銷公關</h1>
+        <p class="subtitle">JEDI Marketing PR Co., Ltd.</p>
+        <p class="desc">
+          邏輯驅動的品牌傳播夥伴。以量化思維整合媒體策略與 AI 智能發稿技術，
+          為超過 60 個品牌客戶打造從「品牌認知」到「精準曝光」的完整公關鏈。
+        </p>
+        <div class="hero-cta">
+          <a href="#cases" class="btn-primary">瀏覽案例 &rarr;</a>
+          <a href="#about" class="btn-outline">了解更多</a>
+        </div>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="hero-metric">
+          <div class="num">23<span>年</span></div>
+          <div class="label">服務經驗</div>
+        </div>
+        <div class="hero-metric">
+          <div class="num">60<span>+</span></div>
+          <div class="label">品牌客戶</div>
+        </div>
+        <div class="hero-metric">
+          <div class="num">9,000<span>萬+</span></div>
+          <div class="label">累計媒體預算 TWD</div>
+        </div>
+        <div class="hero-metric">
+          <div class="num">15<span>+</span></div>
+          <div class="label">產業領域覆蓋</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- ====== STORY BAND ====== -->
+<section class="story-band">
+  <div class="container">
+    <div class="story-inner reveal">
+      <blockquote>
+        「我們相信，每一次品牌溝通都應該是<span class="highlight">可衡量、可追蹤</span>的。<br>
+        從傳統公關到 AI 驅動的精準媒體發稿，<br>
+        季達是品牌的<span class="highlight">全方位傳播夥伴</span>。」
+      </blockquote>
+      <p class="attribution">— Jeffery Wang・季達行銷公關 總經理</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">關於季達</h2>
+      <p class="sub">從傳統公關到 AI 驅動的精準媒體發稿，我們是品牌的全方位傳播夥伴。</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-prose reveal">
+        <p class="body-lg">
+          季達行銷公關以「邏輯與量化思考」為核心 DNA，結合品牌溝通價值整合能力，
+          在精實服務、高效執行與專業知識的三大支柱上，為客戶打造可衡量、可追蹤的行銷成效。
+        </p>
+        <p class="body-lg">
+          2025 年起，季達整合 AI 技術推出<strong style="color:var(--c-accent);">智能新聞稿發送平台</strong>——
+          透過 AI 媒體配對引擎、自動化發稿追蹤與成效分析，讓品牌的每一則新聞稿
+          都能精準觸及最合適的媒體記者，大幅提升曝光效率與 ROI。
+        </p>
+        <p class="body-lg">
+          我們以整合品牌媒體策略見長，運用 Paid Media、Own Media、Earn Media
+          三位一體的媒體概念，搭配台灣業界累積超過 20 年的媒體資料庫與 AI 智能配對，
+          為客戶在數位時代中創造最大化的品牌傳播效益。
+        </p>
+      </div>
+
+      <div class="reveal reveal-d1">
+        <div class="framework-card">
+          <div class="framework-label">
+            <span class="dot" style="background:var(--c-accent);"></span>
+            New Trial — 新客獲取
+          </div>
+          <ul class="framework-list">
+            <li>品牌與消費者策略</li>
+            <li>媒體與公關策略顧問</li>
+            <li>新產品市場行銷規劃與發表會</li>
+            <li>整合行銷與數位行銷策略</li>
+          </ul>
+        </div>
+
+        <div class="framework-card">
+          <div class="framework-label">
+            <span class="dot" style="background:var(--c-accent-light);"></span>
+            Loyalty — 忠誠經營
+          </div>
+          <ul class="framework-list">
+            <li>消費者關係管理與資料庫行銷</li>
+            <li>企業公關、商務會議策劃</li>
+          </ul>
+        </div>
+
+        <div class="framework-card">
+          <p class="heading-3" style="font-size:var(--fs-sm); margin-bottom:var(--sp-4);">IMC 媒體策略模型</p>
+          <div class="media-model">
+            <div class="media-model-item" style="background:var(--c-accent-soft);">
+              <div class="label" style="color:var(--c-accent);">Paid</div>
+              <div class="metrics">CPC · CPA · CPB</div>
+            </div>
+            <div class="media-model-item" style="background:rgba(202,138,4,0.08);">
+              <div class="label" style="color:var(--c-accent-light);">Own</div>
+              <div class="metrics">PV · Fans · CVR</div>
+            </div>
+            <div class="media-model-item" style="background:rgba(68,64,60,0.05);">
+              <div class="label" style="color:var(--c-ink-60);">Earn</div>
+              <div class="metrics">Media Value · Trust</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES ====== -->
+<section class="section-pad" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">服務項目</h2>
+      <p class="sub">從品牌策略到執行落地，提供全方位整合行銷服務。</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9733;</div>
+        <h3 class="heading-3">品牌策略與媒體公關</h3>
+        <p>品牌定位、市場研究、媒體策劃報導、危機公關防禦、發言人訓練與媒體關係建立。</p>
+      </div>
+      <div class="svc-card reveal reveal-d1">
+        <div class="svc-icon" style="background:rgba(202,138,4,0.08); color:var(--c-accent-light);">&#10148;</div>
+        <h3 class="heading-3">新品上市與整合行銷</h3>
+        <p>新產品發表會策劃、通路促銷規劃、消費者活動設計、KOL 合作與整合傳播。</p>
+      </div>
+      <div class="svc-card reveal reveal-d2">
+        <div class="svc-icon" style="background:rgba(68,64,60,0.06); color:var(--c-ink-60);">&#9878;</div>
+        <h3 class="heading-3">企業活動與會議策劃</h3>
+        <p>經銷商大會、榮譽表揚晚宴、醫學研討會、高爾夫聯誼賽等大型活動規劃與執行。</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9775;</div>
+        <h3 class="heading-3">數位行銷與社群經營</h3>
+        <p>社群媒體策略、粉絲團經營、活動官網開發、線上抽獎活動與社群內容企劃。</p>
+      </div>
+      <div class="svc-card reveal reveal-d1">
+        <div class="svc-icon" style="background:rgba(202,138,4,0.08); color:var(--c-accent-light);">&#8644;</div>
+        <h3 class="heading-3">CRM 與資料庫行銷</h3>
+        <p>消費者資料庫建立、社群帳號整合登入、電子報與簡訊發送、忠誠度計畫設計。</p>
+      </div>
+      <div class="svc-card reveal reveal-d2">
+        <div class="svc-icon" style="background:rgba(68,64,60,0.06); color:var(--c-ink-60);">&#9635;</div>
+        <h3 class="heading-3">展覽空間與製作物設計</h3>
+        <p>展覽 VIP Room 空間規劃、3D 佈置設計、背板製作、場刊印刷、識別證系統。</p>
+      </div>
+      <div class="svc-card svc-featured reveal">
+        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9889;</div>
+        <h3 class="heading-3">AI 智能新聞稿發送平台 <span class="svc-badge">NEW 2025</span></h3>
+        <p>AI 媒體配對引擎自動匹配最適記者、一鍵發稿追蹤、開信率即時分析、每週成效報告自動生成。</p>
+      </div>
+    </div>
+
+    <!-- Media Budget Highlight -->
+    <div class="media-hl reveal">
+      <p class="eyebrow" style="color:rgba(255,255,255,0.3);">重點年約客戶</p>
+      <h3 class="heading-3" style="color:#fff; margin-top:var(--sp-2);">媒體操作實績</h3>
+      <div class="media-hl-grid">
+        <div>
+          <div class="media-hl-val">5,000萬+</div>
+          <div class="media-hl-label">台灣 360 年度媒體預算</div>
+          <div class="media-hl-sub">360 度品牌媒體行銷操作</div>
+        </div>
+        <div>
+          <div class="media-hl-val">4,000萬</div>
+          <div class="media-hl-label">蓋德科技兩年電視媒體</div>
+          <div class="media-hl-sub">年約電視媒體操作</div>
+        </div>
+        <div>
+          <div class="media-hl-val">4年+</div>
+          <div class="media-hl-label">美強生品牌年約</div>
+          <div class="media-hl-sub">2010–2014 品牌策略與企業公關</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CASES ====== -->
+<section class="cases section-pad" id="cases">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">精選案例</h2>
+      <p class="sub">橫跨科技、快消、美妝、娛樂、金融等 15+ 產業的實戰經驗。</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" onclick="filterCases('all',this)">全部</button>
+      <button class="filter-btn" onclick="filterCases('brand',this)">品牌行銷</button>
+      <button class="filter-btn" onclick="filterCases('launch',this)">新品上市</button>
+      <button class="filter-btn" onclick="filterCases('corporate',this)">企業公關</button>
+      <button class="filter-btn" onclick="filterCases('digital',this)">數位社群</button>
+      <button class="filter-btn" onclick="filterCases('exhibition',this)">展覽空間</button>
+    </div>
+
+    <div class="cases-grid" id="casesGrid">
+
+      <div class="case-card reveal" data-cat="launch" onclick="openModal('tf3')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/01_變形金剛_Transformers/活動現場_握手會_01.jpg" alt="變形金剛3通路握手會" loading="lazy">
+          <span class="case-tag" style="background:rgba(161,98,7,0.88);">新品上市</span>
+        </div>
+        <div class="case-body">
+          <h3>變形金剛 3 通路握手會</h3>
+          <div class="case-meta">Hasbro 孩之寶 · 2011</div>
+          <div class="case-desc">全台 40+ 場次巡迴，消費者接觸 4,663 人次</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d1" data-cat="brand" onclick="openModal('stclare')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/02_美妝_StClare_Garnier/聖克萊爾_926世界無刺日_01.jpg" alt="聖克萊爾926世界無刺日" loading="lazy">
+          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
+        </div>
+        <div class="case-body">
+          <h3>聖克萊爾 926 世界無刺日</h3>
+          <div class="case-meta">St.Clare · 代言人：賴雅妍</div>
+          <div class="case-desc">品牌節日概念，產品銷售突破 60 萬組</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d2" data-cat="corporate" onclick="openModal('aig')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/03_企業公關_AIG_黑松_殼牌/AIG友邦_榮譽會_01.jpg" alt="AIG友邦榮譽會" loading="lazy">
+          <span class="case-tag" style="background:rgba(68,64,60,0.85);">企業公關</span>
+        </div>
+        <div class="case-body">
+          <h3>AIG 友邦「Speed to Success」榮譽會</h3>
+          <div class="case-meta">AIG 友邦保險</div>
+          <div class="case-desc">大型表揚晚會，結合頒獎與品牌精神傳達</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-cat="exhibition" onclick="openModal('foxconn')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/04_鴻海_Foxconn_Computex/VIP_Room_會議區_01.jpg" alt="FOXCONN Computex VIP Room" loading="lazy">
+          <span class="case-tag" style="background:rgba(120,113,108,0.85);">展覽空間</span>
+        </div>
+        <div class="case-body">
+          <h3>FOXCONN Computex VIP Room</h3>
+          <div class="case-meta">鴻海 Foxconn · 2011 Computex</div>
+          <div class="case-desc">VIP 接待室 3D 空間設計與全套製作物</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d1" data-cat="brand" onclick="openModal('garnier')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/02_美妝_StClare_Garnier/卡尼爾_PURE整合行銷_01.jpg" alt="卡尼爾PURE整合行銷" loading="lazy">
+          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
+        </div>
+        <div class="case-body">
+          <h3>卡尼爾 PURE 整合行銷案</h3>
+          <div class="case-meta">Garnier (L'Oreal) · 代言人：Linda</div>
+          <div class="case-desc">Cosplay 創意消費者活動，線上線下整合</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d2" data-cat="corporate" onclick="openModal('singtel')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/05_SingTel_高爾夫/Golf_Day_入場報到_01.jpg" alt="SingTel Golf Day" loading="lazy">
+          <span class="case-tag" style="background:rgba(68,64,60,0.85);">企業公關</span>
+        </div>
+        <div class="case-body">
+          <h3>SingTel 高爾夫球聯誼賽</h3>
+          <div class="case-meta">新加坡電信 · 2011.11.11</div>
+          <div class="case-desc">桃園長庚球場，出席率 87.5%</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-cat="brand" onclick="openModal('4d')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/06_是方傢飾_Arteriors/記者會_主視覺背板_01.jpg" alt="是方國際傢飾記者會" loading="lazy">
+          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
+        </div>
+        <div class="case-body">
+          <h3>是方國際傢飾記者會暨 VIP 之夜</h3>
+          <div class="case-meta">Arteriors Home 台灣總代理</div>
+          <div class="case-desc">記者會 + VIP 晚宴雙場次品牌發表</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d1" data-cat="digital" onclick="openModal('shiseido')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/07_資生堂_Shiseido/社群操作_SKII參考_01.png" alt="資生堂東京櫃社群操作" loading="lazy">
+          <span class="case-tag" style="background:rgba(161,98,7,0.88);">數位社群</span>
+        </div>
+        <div class="case-body">
+          <h3>資生堂東京櫃社群媒體操作</h3>
+          <div class="case-meta">Shiseido · 2017</div>
+          <div class="case-desc">FB 5,268 粉絲 · 最高曝光 15,888 次</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d2" data-cat="corporate" onclick="openModal('mjn')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/09_尾牙活動_Party/尾牙活動_現場_01.png" alt="美強生醫學研討會" loading="lazy">
+          <span class="case-tag" style="background:rgba(68,64,60,0.85);">企業公關</span>
+        </div>
+        <div class="case-body">
+          <h3>美強生北中南醫學研討會</h3>
+          <div class="case-meta">Mead Johnson · 年約 2010–2014</div>
+          <div class="case-desc">高雄、台中、台北三場巡迴</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-cat="corporate" onclick="openModal('heysong')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/03_企業公關_AIG_黑松_殼牌/黑松_經銷商晚會_01.jpg" alt="黑松經銷商晚會" loading="lazy">
+          <span class="case-tag" style="background:rgba(68,64,60,0.85);">企業公關</span>
+        </div>
+        <div class="case-body">
+          <h3>黑松經銷商歲末酬賓晚會</h3>
+          <div class="case-meta">黑松</div>
+          <div class="case-desc">大型經銷商餐會，品牌感恩與通路激勵</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d1" data-cat="corporate" onclick="openModal('shell')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/03_企業公關_AIG_黑松_殼牌/殼牌_榮耀之旅_01.jpg" alt="殼牌榮耀之旅" loading="lazy">
+          <span class="case-tag" style="background:rgba(68,64,60,0.85);">企業公關</span>
+        </div>
+        <div class="case-body">
+          <h3>殼牌「榮耀之旅」經銷商大會</h3>
+          <div class="case-meta">Shell</div>
+          <div class="case-desc">產品發布與經銷商年度表揚</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d2" data-cat="digital" onclick="openModal('online')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/08_網路行銷_Kraft_台啤/卡夫_美味時光_活動頁_01.jpg" alt="卡夫美味時光" loading="lazy">
+          <span class="case-tag" style="background:rgba(161,98,7,0.88);">數位社群</span>
+        </div>
+        <div class="case-body">
+          <h3>卡夫美味時光 / 台啤刮刮卡</h3>
+          <div class="case-meta">Kraft · 台灣啤酒</div>
+          <div class="case-desc">線上抽獎與 CRM 資料收集</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-cat="brand" onclick="openModal('guerlain')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/06_是方傢飾_Arteriors/VIP之夜_活動照_01.jpg" alt="嬌蘭Rouge Automatique" loading="lazy">
+          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
+        </div>
+        <div class="case-body">
+          <h3>嬌蘭 Rouge Automatique 新品發表</h3>
+          <div class="case-meta">Guerlain (LVMH)</div>
+          <div class="case-desc">全球同步新品發表記者會，媒體策劃報導</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d1" data-cat="launch" onclick="openModal('asti')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/03_企業公關_AIG_黑松_殼牌/經銷商大會_活動照_01.jpg" alt="Asti促銷活動" loading="lazy">
+          <span class="case-tag" style="background:rgba(161,98,7,0.88);">新品上市</span>
+        </div>
+        <div class="case-body">
+          <h3>Bacardi Asti 全省賣場促銷</h3>
+          <div class="case-meta">Bacardi · Asti</div>
+          <div class="case-desc">全省大型量販通路 Tasting Event</div>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-d2" data-cat="brand" onclick="openModal('locknlock')">
+        <div class="case-img-wrap">
+          <img class="case-img" src="images/09_尾牙活動_Party/尾牙活動_現場_02.png" alt="樂扣樂扣媒體公關" loading="lazy">
+          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
+        </div>
+        <div class="case-body">
+          <h3>樂扣樂扣媒體公關年約</h3>
+          <div class="case-meta">Lock &amp; Lock</div>
+          <div class="case-desc">年度媒體公關規劃與品牌策略顧問</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CLIENTS ====== -->
+<section class="section-pad" id="clients">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">客戶名錄</h2>
+      <p class="sub">我們有幸服務過以下品牌。</p>
+    </div>
+
+    <div class="reveal">
+      <p class="client-section-label">Technology &amp; 3C</p>
+      <div class="client-grid">
+        <div class="client-chip">Samsung 三星</div>
+        <div class="client-chip">GIGABYTE 技嘉</div>
+        <div class="client-chip">MSI 微星</div>
+        <div class="client-chip">Foxconn 鴻海</div>
+        <div class="client-chip">HP</div>
+        <div class="client-chip">IBM</div>
+        <div class="client-chip">Emerson</div>
+        <div class="client-chip">Raritan</div>
+        <div class="client-chip">D-Link</div>
+        <div class="client-chip">台灣 360</div>
+        <div class="client-chip">蓋德科技</div>
+        <div class="client-chip">TI 德州儀器</div>
+      </div>
+
+      <p class="client-section-label">Gaming &amp; Entertainment</p>
+      <div class="client-grid">
+        <div class="client-chip">EA Games</div>
+        <div class="client-chip">Hasbro 孩之寶</div>
+        <div class="client-chip">Transformers</div>
+        <div class="client-chip">NERF</div>
+        <div class="client-chip">IGS 鈊象電子</div>
+        <div class="client-chip">曹操之野望</div>
+      </div>
+
+      <p class="client-section-label">FMCG &amp; F&amp;B</p>
+      <div class="client-grid">
+        <div class="client-chip">Kraft 卡夫</div>
+        <div class="client-chip">台灣啤酒</div>
+        <div class="client-chip">黑松</div>
+        <div class="client-chip">金車</div>
+        <div class="client-chip">維他露</div>
+        <div class="client-chip">美國馬鈴薯</div>
+        <div class="client-chip">Dewar's</div>
+        <div class="client-chip">Bacardi</div>
+        <div class="client-chip">Goldfish</div>
+      </div>
+
+      <p class="client-section-label">Beauty &amp; Wellness</p>
+      <div class="client-grid">
+        <div class="client-chip">St.Clare 聖克萊爾</div>
+        <div class="client-chip">Garnier 卡尼爾</div>
+        <div class="client-chip">資生堂東京櫃</div>
+        <div class="client-chip">CHIC CHOC</div>
+        <div class="client-chip">PLAYBOY</div>
+        <div class="client-chip">PAUL &amp; JOE</div>
+        <div class="client-chip">Guerlain 嬌蘭</div>
+        <div class="client-chip">Bio-essence</div>
+      </div>
+
+      <p class="client-section-label">Healthcare · Telecom · Finance</p>
+      <div class="client-grid">
+        <div class="client-chip">美強生 MJN</div>
+        <div class="client-chip">BMS 必治妥</div>
+        <div class="client-chip">拉梅茲 Lamaze</div>
+        <div class="client-chip">NOKIA</div>
+        <div class="client-chip">SingTel</div>
+        <div class="client-chip">AIG 友邦</div>
+        <div class="client-chip">中國信託</div>
+        <div class="client-chip">法巴人壽</div>
+      </div>
+
+      <p class="client-section-label">Lifestyle &amp; Others</p>
+      <div class="client-grid">
+        <div class="client-chip">Unilever 聯合利華</div>
+        <div class="client-chip">PHILIPS 飛利浦</div>
+        <div class="client-chip">TOMTOM</div>
+        <div class="client-chip">Lock &amp; Lock 樂扣樂扣</div>
+        <div class="client-chip">Arteriors Home</div>
+        <div class="client-chip">Shell 殼牌</div>
+        <div class="client-chip">台灣高鐵</div>
+        <div class="client-chip">Intertek</div>
+        <div class="client-chip">中央研究院</div>
+        <div class="client-chip">Yahoo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TIMELINE ====== -->
+<section class="timeline-section section-pad" id="timeline">
+  <div class="container">
+    <div class="timeline-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">公司沿革</h2>
+      <p class="sub">23 年品牌傳播旅程。</p>
+    </div>
+
+    <div class="timeline-track">
+      <div class="tl-item reveal">
+        <div class="tl-year">2003</div>
+        <div class="tl-content">
+          <h4>季達行銷公關成立</h4>
+          <p>由杜俊賢創辦，以「邏輯驅動品牌傳播」為核心理念，定位為專業公關行銷顧問公司。</p>
+        </div>
+      </div>
+      <div class="tl-item reveal reveal-d1">
+        <div class="tl-year">2005–2010</div>
+        <div class="tl-content">
+          <h4>國際品牌年約時代</h4>
+          <p>陸續承接 Samsung、Foxconn、美強生、孩之寶等國際品牌年約服務，建立完整的品牌公關服務能量。</p>
+        </div>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <div class="tl-year">2011–2013</div>
+        <div class="tl-content">
+          <h4>業務高峰期</h4>
+          <p>年度媒體預算累計逾 9,000 萬，服務品牌超過 60 家，橫跨科技、快消、美妝、金融等 15+ 產業。</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2014–2017</div>
+        <div class="tl-content">
+          <h4>數位轉型</h4>
+          <p>從傳統公關轉向數位行銷領域，深耕社群經營、KOL 合作、資料庫行銷與 CRM 系統建置。</p>
+        </div>
+      </div>
+      <div class="tl-item reveal reveal-d1">
+        <div class="tl-year">2018–2024</div>
+        <div class="tl-content">
+          <h4>整合 AI 技術</h4>
+          <p>引入 AI 技術輔助媒體配對與新聞稿發送，開發智能公關工具，啟動數位公關服務升級。</p>
+        </div>
+      </div>
+      <div class="tl-item reveal reveal-d2">
+        <div class="tl-year">2025–2026</div>
+        <div class="tl-content">
+          <h4>AI 智能新聞稿平台上線</h4>
+          <p>正式推出 AI 媒體配對引擎與自動化發稿追蹤平台，結合 20+ 年媒體資料庫，開創精準公關新紀元。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TEAM ====== -->
+<section class="team section-pad" id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">核心團隊</h2>
+    </div>
+
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-dark), var(--c-dark-mid));">JW</div>
+        <h4>Jeffery Wang</h4>
+        <div class="role">總經理</div>
+        <div class="spec">品牌、市場行銷與消費者行銷公關策劃</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-accent), var(--c-accent-light));">IC</div>
+        <h4>Illy Chen</h4>
+        <div class="role">行銷經理</div>
+        <div class="spec">整合行銷策略規劃與品牌創意行銷</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-ink-60), var(--c-ink-40));">CH</div>
+        <h4>Charlene Huang</h4>
+        <div class="role">專案經理</div>
+        <div class="spec">公共關係與整合行銷策略規劃</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg, #78716C, #A8A29E);">SC</div>
+        <h4>Stella Chiu</h4>
+        <div class="role">專案規劃 / 媒體關係</div>
+        <div class="spec">公共關係與媒體策劃報導</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section-pad" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">聯絡方式</h2>
+      <p class="sub">歡迎與我們聯繫，了解更多合作機會。</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <ul class="contact-info">
+          <li>
+            <div class="label">Address</div>
+            <div class="value">11484 台北市內湖區安康路 28-7 號 9 樓</div>
+          </li>
+          <li>
+            <div class="label">Phone</div>
+            <div class="value">+886-2-2792-0979</div>
+          </li>
+          <li>
+            <div class="label">Fax</div>
+            <div class="value">+886-2-2792-1335</div>
+          </li>
+          <li>
+            <div class="label">Established</div>
+            <div class="value">2003</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-d1">
+        <div class="contact-cta-card">
+          <h3>準備好提升品牌傳播效能了嗎？</h3>
+          <p>
+            無論是品牌策略規劃、媒體公關操作、還是 AI 智能新聞稿發送，
+            季達團隊都能為您量身打造最合適的解決方案。
+          </p>
+          <a href="mailto:contact@jedipr.com" class="btn-gold">聯繫我們 &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">JEDI</div>
+        <div class="footer-sub">
+          季達行銷公關有限公司<br>
+          品牌策略 · 媒體公關 · 整合行銷 · AI 新聞稿發送平台
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2003–2026 季達行銷公關<br>
+        JEDI Marketing PR Co., Ltd.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== MODAL ====== -->
+<div class="modal-overlay" id="caseModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+/* Nav scroll — show after 400px */
+const nav = document.getElementById('mainNav');
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const y = window.pageYOffset;
+  nav.classList.toggle('visible', y > 400);
+  lastY = y;
+}, { passive: true });
+
+/* Mobile menu */
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+/* Scroll reveal with IntersectionObserver */
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+/* Filter cases */
+function filterCases(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.case-card').forEach(c => {
+    const show = cat === 'all' || c.dataset.cat === cat;
+    c.style.display = show ? '' : 'none';
+  });
+}
+
+/* Modal data */
+const CD = {
+  tf3: { t:'變形金剛 3 通路握手會', c:'Hasbro 孩之寶', y:'2011', tp:'通路促銷 / 消費者體驗',
+    img:'images/01_變形金剛_Transformers/活動現場_握手會_01.jpg',
+    d:'2011 年暑假，季達為孩之寶策劃「變形金剛 3 通路握手會」全台巡迴活動，從 6/25 到 8/20，橫跨玩具反斗城、家樂福、SOGO、新光三越等通路，共計 40+ 場次。',
+    s:[{l:'巡迴場次',v:'40+'},{l:'消費者接觸',v:'4,663 人次'},{l:'握手會接觸',v:'758 人次'},{l:'玩具銷售',v:'461+ 組'}],
+    h:'大型變形金剛人偶裝巡迴、現場試玩區、消費者合影。同年另策劃年度整合行銷案與新品發表。'},
+  stclare: { t:'聖克萊爾 926 世界無刺日', c:'St.Clare 聖克萊爾', y:'2010s', tp:'品牌行銷 / 新品上市',
+    img:'images/02_美妝_StClare_Garnier/聖克萊爾_926世界無刺日_01.jpg',
+    d:'為聖克萊爾打造「926 世界無刺日」品牌節日概念，邀請藝人賴雅妍擔任代言人，透過線上線下整合傳播成功創造品牌話題。',
+    s:[{l:'產品銷售',v:'60 萬組'},{l:'代言人',v:'賴雅妍'},{l:'品牌節日',v:'926 世界無刺日'}],
+    h:'品牌節日概念 x 名人代言，創下 60 萬組驚人銷售佳績。'},
+  aig: { t:'AIG 友邦「Speed to Success」榮譽會', c:'AIG 友邦保險', y:'2010s', tp:'企業公關 / 榮譽晚宴',
+    img:'images/03_企業公關_AIG_黑松_殼牌/AIG友邦_榮譽會_01.jpg',
+    d:'為 AIG 友邦保險策劃「Speed to Success」主題榮譽表揚大會，打造結合頒獎典禮、娛樂表演與品牌精神傳達的大型晚宴。',
+    s:[{l:'類型',v:'榮譽表揚晚宴'},{l:'主題',v:'Speed to Success'}],
+    h:'完整場地佈置、背板設計、流程規劃與舞台管理，結合多媒體呈現與現場互動。'},
+  foxconn: { t:'FOXCONN Computex VIP Room', c:'鴻海 Foxconn', y:'2011', tp:'企業公關 / 展覽空間',
+    img:'images/04_鴻海_Foxconn_Computex/VIP_Room_會議區_01.jpg',
+    d:'為鴻海在 2011 Computex 規劃 VIP 接待室，以「Easy Going 的採購環境」為核心，打造輕鬆而不失質感的商務交流空間。',
+    s:[{l:'展覽',v:'2011 Computex'},{l:'定位',v:'Easy Going'},{l:'內容',v:'會議區 + 展示區'}],
+    h:'完整 3D 空間設計、場刊印刷、識別證系統，全套製作物。'},
+  garnier: { t:'卡尼爾 PURE 整合行銷案', c:"Garnier (L'Oreal)", y:'2010s', tp:'整合行銷 / 消費者互動',
+    img:'images/02_美妝_StClare_Garnier/卡尼爾_PURE整合行銷_01.jpg',
+    d:"為 L'Oreal 旗下卡尼爾 PURE 系列策劃整合行銷，邀請模特兒 Linda 擔任代言人，以 Cosplay 為創意核心設計消費者互動活動。",
+    s:[{l:'代言人',v:'Linda'},{l:'創意主題',v:'Cosplay'},{l:'類型',v:'整合行銷'}],
+    h:'線上線下消費者互動設計，Cosplay 活動吸引年輕族群，提升品牌知名度。'},
+  singtel: { t:'SingTel 高爾夫球聯誼賽', c:'SingTel 新加坡電信', y:'2011', tp:'企業公關 / 客戶關係',
+    img:'images/05_SingTel_高爾夫/Golf_Day_入場報到_01.jpg',
+    d:'為新加坡電信策劃年度高爾夫球聯誼賽暨感恩餐會，嚴選桃園長庚球場舉辦。',
+    s:[{l:'日期',v:'2011.11.11'},{l:'報名',v:'48 人'},{l:'出席',v:'42 人'},{l:'出席率',v:'87.5%'}],
+    h:'eDM 邀請函、背板設計、球場指示牌、餐券、獎品採購，以及午宴頒獎典禮。'},
+  '4d': { t:'是方國際傢飾記者會暨 VIP 之夜', c:'Arteriors Home 台灣總代理', y:'2011', tp:'品牌發表 / 媒體公關',
+    img:'images/06_是方傢飾_Arteriors/記者會_主視覺背板_01.jpg',
+    d:'為美國品牌 Arteriors Home 台灣總代理在敦北門市舉辦品牌發表記者會暨 VIP 之夜。',
+    s:[{l:'場次',v:'記者會 + VIP 晚宴'},{l:'場地',v:'敦北門市'},{l:'品牌',v:'Arteriors Home'}],
+    h:'邀請函、eDM 報名系統、背板、拍立得紙相框、簽名軸、MIC 牌、客製筆記本。'},
+  shiseido: { t:'資生堂東京櫃社群媒體操作', c:'資生堂東京櫃 / 怡麗絲爾', y:'2017', tp:'社群行銷 / KOL',
+    img:'images/07_資生堂_Shiseido/社群操作_SKII參考_01.png',
+    d:'經營 Facebook 粉絲團與 Instagram，以三角色人物設定（麗麗醬、彩子、溫度女孩）觸及不同消費族群。',
+    s:[{l:'FB 粉絲',v:'5,268'},{l:'月發文',v:'15 則'},{l:'最高曝光',v:'15,888 次'},{l:'最高互動',v:'943 人'}],
+    h:'三角色人物策略、FB + IG 雙平台、競品分析（SK-II、YSL）與策略建議。'},
+  mjn: { t:'美強生北中南醫學研討會', c:'Mead Johnson 美強生', y:'2011（年約 2010–2014）', tp:'企業公關 / 醫學研討會',
+    img:'images/09_尾牙活動_Party/尾牙活動_現場_01.png',
+    d:'策劃北中南三場醫學研討會，主題涵蓋 DHA 嬰兒視力發展、懷孕哺乳期營養等專業議題。',
+    s:[{l:'場次',v:'高雄 / 台中 / 台北'},{l:'年約',v:'2010–2014'},{l:'場地',v:'金典酒店等'}],
+    h:'弧形屏風背板、六大科學實證展區、X 展架 8 座、關東旗 50 組，全套場佈置。'},
+  heysong: { t:'黑松經銷商歲末酬賓晚會', c:'黑松', y:'2000s–2010s', tp:'企業公關 / 經銷商關係',
+    img:'images/03_企業公關_AIG_黑松_殼牌/黑松_經銷商晚會_01.jpg',
+    d:'為台灣知名飲料品牌黑松策劃經銷商歲末酬賓大型晚會，融合品牌感恩與經銷商激勵。',
+    s:[{l:'類型',v:'歲末酬賓晚會'},{l:'目標',v:'經銷商關係維護'}],
+    h:'完整大型餐會策劃，含場地規劃、流程設計、表演安排與品牌形象展示。'},
+  shell: { t:'殼牌「榮耀之旅」經銷商大會', c:'Shell 殼牌', y:'2010s', tp:'企業公關 / 經銷商大會',
+    img:'images/03_企業公關_AIG_黑松_殼牌/殼牌_榮耀之旅_01.jpg',
+    d:'為國際石油品牌殼牌策劃「榮耀之旅」主題經銷商大會，結合產品發布與年度表揚。',
+    s:[{l:'主題',v:'榮耀之旅'},{l:'類型',v:'經銷商年度大會'}],
+    h:'國際品牌規格經銷商大會，涵蓋產品發布、業績表揚、品牌策略溝通。'},
+  online: { t:'卡夫美味時光 / 台啤刮刮卡', c:'Kraft / 台灣啤酒', y:'2010s', tp:'網路行銷 / 促銷',
+    img:'images/08_網路行銷_Kraft_台啤/卡夫_美味時光_活動頁_01.jpg',
+    d:'為卡夫設計「美味時光」線上抽獎，為台灣啤酒設計刮刮卡促銷，兩案均整合 CRM 資料收集。',
+    s:[{l:'卡夫',v:'線上抽獎'},{l:'台啤',v:'刮刮卡促銷'},{l:'共通',v:'CRM 資料收集'}],
+    h:'線上活動與實體促銷雙軌，結合消費者資料庫建立，為後續精準行銷奠定基礎。'},
+  guerlain: { t:'嬌蘭 Rouge Automatique 新品發表', c:'Guerlain (LVMH)', y:'2011', tp:'品牌發表 / 媒體公關',
+    img:'images/06_是方傢飾_Arteriors/VIP之夜_活動照_01.jpg',
+    d:'為法國精品美妝品牌嬌蘭策劃 Rouge Automatique 唇膏系列與夏妝 Terra Inca 系列新品發表會，全球同步上市，包含記者會現場規劃、媒體邀請函設計、產品介紹與新聞稿撰寫。',
+    s:[{l:'品牌',v:'Guerlain (LVMH)'},{l:'產品',v:'Rouge Automatique'},{l:'類型',v:'全球同步新品發表'},{l:'媒體策劃',v:'記者會 + 新聞稿'}],
+    h:'國際精品等級記者會規劃，邀請嬌蘭全球彩妝藝術總監 Olivier Echaudemaison 出席，搭配完整媒體策劃報導。'},
+  asti: { t:'Bacardi Asti 全省賣場促銷活動', c:'Bacardi / Asti', y:'2009', tp:'通路促銷 / 消費者活動',
+    img:'images/03_企業公關_AIG_黑松_殼牌/經銷商大會_活動照_01.jpg',
+    d:'為 Bacardi 旗下 Asti 氣泡酒策劃全省大型量販通路 Tasting Event，覆蓋大潤發、家樂福等主要賣場，從駐場人員管理、物料配送到日報表追蹤的完整執行。',
+    s:[{l:'通路',v:'大潤發 / 家樂福'},{l:'類型',v:'Tasting Event'},{l:'管理',v:'人員駐場 + 日報表'},{l:'範圍',v:'全省覆蓋'}],
+    h:'完整的通路促銷專案管理：駐場前訓練、SMS 工作提醒、物流協調、執行結報與費用請款一條龍。'},
+  locknlock: { t:'樂扣樂扣媒體公關年約', c:'Lock & Lock', y:'2014', tp:'品牌策略 / 媒體公關年約',
+    img:'images/09_尾牙活動_Party/尾牙活動_現場_02.png',
+    d:'為韓國知名保鮮容器品牌樂扣樂扣提供年度媒體公關顧問服務，涵蓋品牌策略規劃、媒體關係維護、新品發布媒體策劃報導與企業公關事務。',
+    s:[{l:'服務',v:'年度媒體公關'},{l:'品牌',v:'Lock & Lock'},{l:'範圍',v:'品牌策略 + 媒體報導'}],
+    h:'年約客戶深度合作，從品牌定位到媒體曝光的全方位公關顧問服務。'}
+};
+
+function openModal(id) {
+  const d = CD[id]; if (!d) return;
+  const stats = d.s.map(s => `<div class="modal-stat"><div class="val">${s.v}</div><div class="label">${s.l}</div></div>`).join('');
+  document.getElementById('modalBody').innerHTML = `
+    <img class="modal-hero-img" src="${d.img}" alt="${d.t}">
+    <div class="modal-body">
+      <div class="meta">${d.c} · ${d.y}</div>
+      <h2>${d.t}</h2>
+      <span class="type-badge">${d.tp}</span>
+      <p class="desc">${d.d}</p>
+      <div class="modal-stats">${stats}</div>
+      <div class="modal-highlight">
+        <div class="hl-label">Highlight</div>
+        <p>${d.h}</p>
+      </div>
+    </div>`;
+  document.getElementById('caseModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('caseModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* Smooth anchor navigation */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
