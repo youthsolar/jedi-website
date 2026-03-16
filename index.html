@@ -9,6 +9,27 @@
 <meta property="og:title" content="季達行銷公關 JEDI Marketing PR">
 <meta property="og:description" content="Since 2003 — 邏輯驅動的品牌傳播夥伴">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://jedi.net.tw/">
+<meta property="og:image" content="https://jedi.net.tw/images/10_公司簡介_JEDI/JEDI_品牌策略_01.png">
+<link rel="canonical" href="https://jedi.net.tw/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "季達行銷公關有限公司",
+  "alternateName": "JEDI Marketing PR Co., Ltd.",
+  "url": "https://jedi.net.tw",
+  "telephone": "+886-922-790-873",
+  "foundingDate": "2003",
+  "description": "23年品牌策略、媒體公關、整合行銷經驗。服務超過60個品牌客戶，結合AI技術提供智能新聞稿發送服務。",
+  "knowsAbout": ["品牌策略", "媒體公關", "整合行銷", "AI新聞稿", "數位行銷", "危機公關"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Taiwan"
+  },
+  "sameAs": ["https://2pr.ai"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
@@ -848,6 +869,50 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .btn-primary, .btn-outline { text-align: center; justify-content: center; }
   .hero-metrics { grid-template-columns: 1fr 1fr; }
 }
+
+/* ============================
+   FAQ
+   ============================ */
+.faq-list { max-width: 800px; }
+.faq-item {
+  background: var(--c-surface);
+  border-radius: var(--r-lg);
+  margin-bottom: var(--sp-3);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+}
+.faq-q {
+  padding: var(--sp-5) var(--sp-6);
+  font-family: 'Noto Serif TC', serif;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--c-ink);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: var(--sp-12);
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: var(--sp-6);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--fs-xl);
+  color: var(--c-accent);
+  font-weight: 300;
+  transition: transform var(--t-fast);
+}
+details[open] .faq-q::after { content: '−'; }
+.faq-a {
+  padding: 0 var(--sp-6) var(--sp-5);
+}
+.faq-a p {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-60);
+  line-height: 1.85;
+}
 </style>
 </head>
 <body>
@@ -864,6 +929,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
       <a href="#timeline">公司沿革</a>
       <a href="#team">團隊</a>
       <a href="#contact">聯絡方式</a>
+      <a href="#faq">FAQ</a>
     </div>
     <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
   </div>
@@ -879,6 +945,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   <a href="#timeline" onclick="toggleMenu()">公司沿革</a>
   <a href="#team" onclick="toggleMenu()">團隊</a>
   <a href="#contact" onclick="toggleMenu()">聯絡方式</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
 </div>
 
 <!-- ====== HERO ====== -->
@@ -1487,20 +1554,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
       <div class="reveal">
         <ul class="contact-info">
           <li>
-            <div class="label">Address</div>
-            <div class="value">11484 台北市內湖區安康路 28-7 號 9 樓</div>
-          </li>
-          <li>
             <div class="label">Phone</div>
-            <div class="value">+886-2-2792-0979</div>
+            <div class="value"><a href="tel:+886922790873" style="color:inherit;">+886-922-790-873</a></div>
           </li>
           <li>
-            <div class="label">Fax</div>
-            <div class="value">+886-2-2792-1335</div>
+            <div class="label">Contact</div>
+            <div class="value">王先生 Jeffery Wang</div>
           </li>
           <li>
             <div class="label">Established</div>
             <div class="value">2003</div>
+          </li>
+          <li>
+            <div class="label">AI 新聞稿平台</div>
+            <div class="value"><a href="https://2pr.ai" target="_blank" rel="noopener" style="color:var(--c-accent-light);">2pr.ai &rarr;</a></div>
           </li>
         </ul>
       </div>
@@ -1512,11 +1579,92 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
             無論是品牌策略規劃、媒體公關操作、還是 AI 智能新聞稿發送，
             季達團隊都能為您量身打造最合適的解決方案。
           </p>
-          <a href="mailto:contact@jedipr.com" class="btn-gold">聯繫我們 &rarr;</a>
+          <a href="contact.html" class="btn-gold">聯繫我們 &rarr;</a>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="section-pad" id="faq" style="background:var(--c-surface-dim);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="line"></div>
+      <h2 class="heading-2">常見問題</h2>
+      <p class="sub">關於公關行銷服務的常見疑問</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary class="faq-q">台灣公關公司怎麼選？評估公關公司的關鍵指標有哪些？</summary>
+        <div class="faq-a"><p>選擇公關公司時，建議從四個面向評估：（1）產業經驗——是否有服務過同產業品牌的實績；（2）媒體資源——是否擁有完善的媒體資料庫與記者關係；（3）策略思維——能否提出量化且可追蹤的公關策略，而非僅做執行；（4）服務彈性——能否根據品牌階段提供從年約顧問到專案式的靈活服務。季達行銷公關自 2003 年成立以來，累計服務超過 60 個品牌，橫跨 15 個以上產業，正是以邏輯量化與媒體策略見長的公關顧問公司。</p></div>
+      </details>
+      <details class="faq-item reveal reveal-d1">
+        <summary class="faq-q">新聞稿怎麼發？如何讓新聞稿被媒體採用？</summary>
+        <div class="faq-a"><p>有效的新聞稿發送需要三個關鍵：（1）新聞價值——內容必須具備時效性、話題性或數據佐證；（2）精準媒體配對——將稿件發送給真正關注該領域的記者，而非大量群發；（3）發稿時機——配合媒體截稿時程與新聞週期。季達在 2025 年推出的 AI 新聞稿平台 2pr.ai，透過 AI 媒體配對引擎自動比對最適合的記者名單，大幅提升發稿效率與媒體採用率。</p></div>
+      </details>
+      <details class="faq-item reveal reveal-d2">
+        <summary class="faq-q">季達行銷公關提供哪些服務？</summary>
+        <div class="faq-a"><p>季達提供六大核心服務：（1）媒體公關策略——品牌定位、媒體策略規劃與危機公關防禦；（2）新聞稿撰寫與發稿——含 AI 智能新聞稿發送平台 2pr.ai；（3）品牌活動企劃——新品發表會、記者會、消費者體驗活動；（4）數位整合行銷——社群經營、KOL 合作、線上線下整合；（5）企業公關與會議策劃——經銷商大會、醫學研討會、榮譽晚宴；（6）CRM 與資料庫行銷——消費者資料收集、分眾行銷與會員經營。</p></div>
+      </details>
+      <details class="faq-item reveal reveal-d2">
+        <summary class="faq-q">公關公司與廣告公司有什麼不同？</summary>
+        <div class="faq-a"><p>最核心的差異在於「可信度」與「傳播方式」。廣告是品牌付費購買的媒體版位（Paid Media），消費者知道這是廣告；公關則是透過媒體報導、第三方背書與口碑傳播（Earned Media）來建立品牌信任。季達行銷公關擅長整合 Paid、Own、Earned 三大媒體策略，讓品牌在不同觸點都能產生最大化的傳播效益。</p></div>
+      </details>
+      <details class="faq-item reveal reveal-d3">
+        <summary class="faq-q">AI 如何改變公關產業？2pr.ai 是什麼？</summary>
+        <div class="faq-a"><p>AI 正在三個層面革新公關產業：（1）媒體配對自動化——AI 分析記者的報導偏好，自動推薦最適合的發稿對象；（2）內容產製效率化——AI 輔助新聞稿撰寫與多版本生成；（3）成效追蹤即時化——自動監測媒體曝光與量化 PR Value。2pr.ai 是季達推出的 AI 新聞稿發送平台，整合這三項能力，讓品牌只需上傳新聞稿，即可由 AI 完成媒體比對、發送與追蹤，大幅降低公關執行門檻。</p></div>
+      </details>
+    </div>
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "台灣公關公司怎麼選？評估公關公司的關鍵指標有哪些？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "選擇公關公司時，建議從四個面向評估：（1）產業經驗——是否有服務過同產業品牌的實績；（2）媒體資源——是否擁有完善的媒體資料庫與記者關係；（3）策略思維——能否提出量化且可追蹤的公關策略，而非僅做執行；（4）服務彈性——能否根據品牌階段提供從年約顧問到專案式的靈活服務。季達行銷公關自 2003 年成立以來，累計服務超過 60 個品牌，橫跨 15 個以上產業，正是以邏輯量化與媒體策略見長的公關顧問公司。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "新聞稿怎麼發？如何讓新聞稿被媒體採用？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "有效的新聞稿發送需要三個關鍵：（1）新聞價值——內容必須具備時效性、話題性或數據佐證；（2）精準媒體配對——將稿件發送給真正關注該領域的記者，而非大量群發；（3）發稿時機——配合媒體截稿時程與新聞週期。季達在 2025 年推出的 AI 新聞稿平台 2pr.ai，透過 AI 媒體配對引擎自動比對最適合的記者名單，大幅提升發稿效率與媒體採用率。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "季達行銷公關提供哪些服務？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "季達提供六大核心服務：（1）媒體公關策略；（2）新聞稿撰寫與發稿（含 AI 智能新聞稿發送平台 2pr.ai）；（3）品牌活動企劃；（4）數位整合行銷；（5）企業公關與會議策劃；（6）CRM 與資料庫行銷。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "公關公司與廣告公司有什麼不同？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "最核心的差異在於可信度與傳播方式。廣告是品牌付費購買的媒體版位（Paid Media），公關則是透過媒體報導、第三方背書與口碑傳播（Earned Media）來建立品牌信任。季達擅長整合 Paid、Own、Earned 三大媒體策略，讓品牌在不同觸點都能產生最大化的傳播效益。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AI 如何改變公關產業？2pr.ai 是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI 正在三個層面革新公關產業：媒體配對自動化、內容產製效率化、成效追蹤即時化。2pr.ai 是季達推出的 AI 新聞稿發送平台，讓品牌只需上傳新聞稿，即可由 AI 完成媒體比對、發送與追蹤，大幅降低公關執行門檻。"
+        }
+      }
+    ]
+  }
+  </script>
 </section>
 
 <!-- ====== FOOTER ====== -->
