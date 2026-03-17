@@ -634,30 +634,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ============================
-   TEAM
-   ============================ */
-.team { background: var(--c-surface-dim); }
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-8); }
-.team-card {
-  text-align: center;
-  padding: var(--sp-8) var(--sp-4);
-  border-radius: var(--r-lg);
-  transition: all var(--t-normal) var(--ease-out);
-}
-.team-card:hover { background: var(--c-surface); box-shadow: var(--shadow-md); }
-.team-avatar {
-  width: 80px; height: 80px;
-  border-radius: 50%;
-  display: grid; place-items: center;
-  color: #fff; font-weight: 600; font-size: var(--fs-lg);
-  margin: 0 auto var(--sp-5);
-  font-family: 'Inter', sans-serif;
-}
-.team-card h4 { font-family: 'Noto Serif TC', serif; font-size: var(--fs-sm); font-weight: 600; color: var(--c-ink); }
-.team-card .role { font-size: var(--fs-xs); color: var(--c-accent); margin-top: var(--sp-1); font-weight: 500; }
-.team-card .spec { font-size: var(--fs-xs); color: var(--c-ink-40); margin-top: var(--sp-2); line-height: 1.5; }
-
-/* ============================
    CONTACT
    ============================ */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); align-items: start; }
@@ -850,7 +826,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .services-grid { grid-template-columns: 1fr; }
   .media-hl-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
   .cases-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .nav-hamburger { display: block; }
@@ -861,6 +836,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .tl-item { grid-template-columns: auto 1fr; gap: var(--sp-4); }
   .tl-item::before { left: 0; transform: none; }
   .timeline-track::before { left: 4px; }
+  .timeline-track { padding-left: var(--sp-6); }
   .tl-year { text-align: left; padding-right: 0; font-size: var(--fs-base); min-width: 90px; }
   .tl-content { padding-left: 0; }
 }
@@ -927,7 +903,6 @@ details[open] .faq-q::after { content: '−'; }
       <a href="#cases">精選案例</a>
       <a href="#clients">客戶名錄</a>
       <a href="#timeline">公司沿革</a>
-      <a href="#team">團隊</a>
       <a href="#contact">聯絡方式</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -943,7 +918,6 @@ details[open] .faq-q::after { content: '−'; }
   <a href="#cases" onclick="toggleMenu()">精選案例</a>
   <a href="#clients" onclick="toggleMenu()">客戶名錄</a>
   <a href="#timeline" onclick="toggleMenu()">公司沿革</a>
-  <a href="#team" onclick="toggleMenu()">團隊</a>
   <a href="#contact" onclick="toggleMenu()">聯絡方式</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
 </div>
@@ -1108,7 +1082,7 @@ details[open] .faq-q::after { content: '−'; }
         <p>經銷商大會、榮譽表揚晚宴、醫學研討會、高爾夫聯誼賽等大型活動規劃與執行。</p>
       </div>
       <div class="svc-card reveal">
-        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9775;</div>
+        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#128241;</div>
         <h3 class="heading-3">數位行銷與社群經營</h3>
         <p>社群媒體策略、粉絲團經營、活動官網開發、線上抽獎活動與社群內容企劃。</p>
       </div>
@@ -1129,28 +1103,6 @@ details[open] .faq-q::after { content: '−'; }
       </div>
     </div>
 
-    <!-- Media Budget Highlight -->
-    <div class="media-hl reveal">
-      <p class="eyebrow" style="color:rgba(255,255,255,0.3);">重點年約客戶</p>
-      <h3 class="heading-3" style="color:#fff; margin-top:var(--sp-2);">媒體操作實績</h3>
-      <div class="media-hl-grid">
-        <div>
-          <div class="media-hl-val">5,000萬+</div>
-          <div class="media-hl-label">台灣 360 年度媒體預算</div>
-          <div class="media-hl-sub">360 度品牌媒體行銷操作</div>
-        </div>
-        <div>
-          <div class="media-hl-val">4,000萬</div>
-          <div class="media-hl-label">蓋德科技兩年電視媒體</div>
-          <div class="media-hl-sub">年約電視媒體操作</div>
-        </div>
-        <div>
-          <div class="media-hl-val">4年+</div>
-          <div class="media-hl-label">美強生品牌年約</div>
-          <div class="media-hl-sub">2010–2014 品牌策略與企業公關</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1182,7 +1134,7 @@ details[open] .faq-q::after { content: '−'; }
         <div class="case-body">
           <h3>變形金剛 3 通路握手會</h3>
           <div class="case-meta">Hasbro 孩之寶 · 2011</div>
-          <div class="case-desc">全台 40+ 場次巡迴，消費者接觸 4,663 人次</div>
+          <div class="case-desc">全台 40+ 場次巡迴，消費者接觸 46,630+ 人</div>
         </div>
       </div>
 
@@ -1260,13 +1212,13 @@ details[open] .faq-q::after { content: '−'; }
 
       <div class="case-card reveal reveal-d1" data-cat="digital" onclick="openModal('shiseido')">
         <div class="case-img-wrap">
-          <img class="case-img" src="images/07_資生堂_Shiseido/社群操作_SKII參考_01.png" alt="資生堂東京櫃社群操作" loading="lazy">
+          <img class="case-img" src="images/07_資生堂_Shiseido/IG操作_品牌參考_01.png" alt="資生堂東京櫃社群操作" loading="lazy">
           <span class="case-tag" style="background:rgba(161,98,7,0.88);">數位社群</span>
         </div>
         <div class="case-body">
           <h3>資生堂東京櫃社群媒體操作</h3>
           <div class="case-meta">Shiseido · 2017</div>
-          <div class="case-desc">FB 5,268 粉絲 · 最高曝光 15,888 次</div>
+          <div class="case-desc">FB 52,680 粉絲/年 · 最高曝光 15,888 次</div>
         </div>
       </div>
 
@@ -1318,18 +1270,6 @@ details[open] .faq-q::after { content: '−'; }
         </div>
       </div>
 
-      <div class="case-card reveal" data-cat="brand" onclick="openModal('guerlain')">
-        <div class="case-img-wrap">
-          <img class="case-img" src="images/06_是方傢飾_Arteriors/VIP之夜_活動照_01.jpg" alt="嬌蘭Rouge Automatique" loading="lazy">
-          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
-        </div>
-        <div class="case-body">
-          <h3>嬌蘭 Rouge Automatique 新品發表</h3>
-          <div class="case-meta">Guerlain (LVMH)</div>
-          <div class="case-desc">全球同步新品發表記者會，媒體策劃報導</div>
-        </div>
-      </div>
-
       <div class="case-card reveal reveal-d1" data-cat="launch" onclick="openModal('asti')">
         <div class="case-img-wrap">
           <img class="case-img" src="images/03_企業公關_AIG_黑松_殼牌/經銷商大會_活動照_01.jpg" alt="Asti促銷活動" loading="lazy">
@@ -1339,18 +1279,6 @@ details[open] .faq-q::after { content: '−'; }
           <h3>Bacardi Asti 全省賣場促銷</h3>
           <div class="case-meta">Bacardi · Asti</div>
           <div class="case-desc">全省大型量販通路 Tasting Event</div>
-        </div>
-      </div>
-
-      <div class="case-card reveal reveal-d2" data-cat="brand" onclick="openModal('locknlock')">
-        <div class="case-img-wrap">
-          <img class="case-img" src="images/09_尾牙活動_Party/尾牙活動_現場_02.png" alt="樂扣樂扣媒體公關" loading="lazy">
-          <span class="case-tag" style="background:rgba(202,138,4,0.88);">品牌行銷</span>
-        </div>
-        <div class="case-body">
-          <h3>樂扣樂扣媒體公關年約</h3>
-          <div class="case-meta">Lock &amp; Lock</div>
-          <div class="case-desc">年度媒體公關規劃與品牌策略顧問</div>
         </div>
       </div>
 
@@ -1504,43 +1432,6 @@ details[open] .faq-q::after { content: '−'; }
   </div>
 </section>
 
-<!-- ====== TEAM ====== -->
-<section class="team section-pad" id="team">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="line"></div>
-      <h2 class="heading-2">核心團隊</h2>
-    </div>
-
-    <div class="team-grid reveal">
-      <div class="team-card">
-        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-dark), var(--c-dark-mid));">JW</div>
-        <h4>Jeffery Wang</h4>
-        <div class="role">總經理</div>
-        <div class="spec">品牌、市場行銷與消費者行銷公關策劃</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-accent), var(--c-accent-light));">IC</div>
-        <h4>Illy Chen</h4>
-        <div class="role">行銷經理</div>
-        <div class="spec">整合行銷策略規劃與品牌創意行銷</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar" style="background:linear-gradient(135deg, var(--c-ink-60), var(--c-ink-40));">CH</div>
-        <h4>Charlene Huang</h4>
-        <div class="role">專案經理</div>
-        <div class="spec">公共關係與整合行銷策略規劃</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar" style="background:linear-gradient(135deg, #78716C, #A8A29E);">SC</div>
-        <h4>Stella Chiu</h4>
-        <div class="role">專案規劃 / 媒體關係</div>
-        <div class="spec">公共關係與媒體策劃報導</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ====== CONTACT ====== -->
 <section class="section-pad" id="contact">
   <div class="container">
@@ -1559,7 +1450,7 @@ details[open] .faq-q::after { content: '−'; }
           </li>
           <li>
             <div class="label">Contact</div>
-            <div class="value">王先生 Jeffery Wang</div>
+            <div class="value">Jeffery Wang</div>
           </li>
           <li>
             <div class="label">Established</div>
@@ -1736,7 +1627,7 @@ const CD = {
   tf3: { t:'變形金剛 3 通路握手會', c:'Hasbro 孩之寶', y:'2011', tp:'通路促銷 / 消費者體驗',
     img:'images/01_變形金剛_Transformers/活動現場_握手會_01.jpg',
     d:'2011 年暑假，季達為孩之寶策劃「變形金剛 3 通路握手會」全台巡迴活動，從 6/25 到 8/20，橫跨玩具反斗城、家樂福、SOGO、新光三越等通路，共計 40+ 場次。',
-    s:[{l:'巡迴場次',v:'40+'},{l:'消費者接觸',v:'4,663 人次'},{l:'握手會接觸',v:'758 人次'},{l:'玩具銷售',v:'461+ 組'}],
+    s:[{l:'巡迴場次',v:'40+'},{l:'消費者接觸',v:'46,630+ 人'},{l:'握手會接觸',v:'7,580+ 人次'},{l:'現場銷售',v:'4,610+ 組'}],
     h:'大型變形金剛人偶裝巡迴、現場試玩區、消費者合影。同年另策劃年度整合行銷案與新品發表。'},
   stclare: { t:'聖克萊爾 926 世界無刺日', c:'St.Clare 聖克萊爾', y:'2010s', tp:'品牌行銷 / 新品上市',
     img:'images/02_美妝_StClare_Garnier/聖克萊爾_926世界無刺日_01.jpg',
@@ -1769,9 +1660,9 @@ const CD = {
     s:[{l:'場次',v:'記者會 + VIP 晚宴'},{l:'場地',v:'敦北門市'},{l:'品牌',v:'Arteriors Home'}],
     h:'邀請函、eDM 報名系統、背板、拍立得紙相框、簽名軸、MIC 牌、客製筆記本。'},
   shiseido: { t:'資生堂東京櫃社群媒體操作', c:'資生堂東京櫃 / 怡麗絲爾', y:'2017', tp:'社群行銷 / KOL',
-    img:'images/07_資生堂_Shiseido/社群操作_SKII參考_01.png',
+    img:'images/07_資生堂_Shiseido/IG操作_品牌參考_01.png',
     d:'經營 Facebook 粉絲團與 Instagram，以三角色人物設定（麗麗醬、彩子、溫度女孩）觸及不同消費族群。',
-    s:[{l:'FB 粉絲',v:'5,268'},{l:'月發文',v:'15 則'},{l:'最高曝光',v:'15,888 次'},{l:'最高互動',v:'943 人'}],
+    s:[{l:'FB 粉絲',v:'52,680人/年'},{l:'月發文',v:'15 則'},{l:'最高曝光',v:'15,888 次'},{l:'最高互動',v:'943 人'}],
     h:'三角色人物策略、FB + IG 雙平台、競品分析（SK-II、YSL）與策略建議。'},
   mjn: { t:'美強生北中南醫學研討會', c:'Mead Johnson 美強生', y:'2011（年約 2010–2014）', tp:'企業公關 / 醫學研討會',
     img:'images/09_尾牙活動_Party/尾牙活動_現場_01.png',
@@ -1793,21 +1684,11 @@ const CD = {
     d:'為卡夫設計「美味時光」線上抽獎，為台灣啤酒設計刮刮卡促銷，兩案均整合 CRM 資料收集。',
     s:[{l:'卡夫',v:'線上抽獎'},{l:'台啤',v:'刮刮卡促銷'},{l:'共通',v:'CRM 資料收集'}],
     h:'線上活動與實體促銷雙軌，結合消費者資料庫建立，為後續精準行銷奠定基礎。'},
-  guerlain: { t:'嬌蘭 Rouge Automatique 新品發表', c:'Guerlain (LVMH)', y:'2011', tp:'品牌發表 / 媒體公關',
-    img:'images/06_是方傢飾_Arteriors/VIP之夜_活動照_01.jpg',
-    d:'為法國精品美妝品牌嬌蘭策劃 Rouge Automatique 唇膏系列與夏妝 Terra Inca 系列新品發表會，全球同步上市，包含記者會現場規劃、媒體邀請函設計、產品介紹與新聞稿撰寫。',
-    s:[{l:'品牌',v:'Guerlain (LVMH)'},{l:'產品',v:'Rouge Automatique'},{l:'類型',v:'全球同步新品發表'},{l:'媒體策劃',v:'記者會 + 新聞稿'}],
-    h:'國際精品等級記者會規劃，邀請嬌蘭全球彩妝藝術總監 Olivier Echaudemaison 出席，搭配完整媒體策劃報導。'},
   asti: { t:'Bacardi Asti 全省賣場促銷活動', c:'Bacardi / Asti', y:'2009', tp:'通路促銷 / 消費者活動',
     img:'images/03_企業公關_AIG_黑松_殼牌/經銷商大會_活動照_01.jpg',
     d:'為 Bacardi 旗下 Asti 氣泡酒策劃全省大型量販通路 Tasting Event，覆蓋大潤發、家樂福等主要賣場，從駐場人員管理、物料配送到日報表追蹤的完整執行。',
     s:[{l:'通路',v:'大潤發 / 家樂福'},{l:'類型',v:'Tasting Event'},{l:'管理',v:'人員駐場 + 日報表'},{l:'範圍',v:'全省覆蓋'}],
     h:'完整的通路促銷專案管理：駐場前訓練、SMS 工作提醒、物流協調、執行結報與費用請款一條龍。'},
-  locknlock: { t:'樂扣樂扣媒體公關年約', c:'Lock & Lock', y:'2014', tp:'品牌策略 / 媒體公關年約',
-    img:'images/09_尾牙活動_Party/尾牙活動_現場_02.png',
-    d:'為韓國知名保鮮容器品牌樂扣樂扣提供年度媒體公關顧問服務，涵蓋品牌策略規劃、媒體關係維護、新品發布媒體策劃報導與企業公關事務。',
-    s:[{l:'服務',v:'年度媒體公關'},{l:'品牌',v:'Lock & Lock'},{l:'範圍',v:'品牌策略 + 媒體報導'}],
-    h:'年約客戶深度合作，從品牌定位到媒體曝光的全方位公關顧問服務。'}
 };
 
 function openModal(id) {
