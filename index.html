@@ -105,7 +105,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip; }
 
 body {
   font-family: 'Noto Sans TC', 'Inter', -apple-system, system-ui, sans-serif;
@@ -867,13 +867,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .client-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
   .client-chip { white-space: normal; overflow: visible; text-overflow: unset; font-size: 0.7rem; padding: var(--sp-2) var(--sp-3); }
 
-  /* --- TIMELINE: single-column left-aligned --- */
-  .timeline-track { padding-left: 2.5rem; overflow: visible; }
-  .timeline-track::before { left: 0.75rem; transform: none; }
-  .tl-item { grid-template-columns: 1fr; padding-left: 1rem; gap: var(--sp-2); margin-bottom: var(--sp-8); }
-  .tl-item::before { left: -1.75rem; top: 4px; width: 8px; height: 8px; transform: none; }
-  .tl-year { text-align: left; min-width: unset; font-size: var(--fs-base); padding-right: 0; }
-  .tl-content { padding-left: 0; }
+  /* --- TIMELINE: single-column left-aligned (block layout to avoid grid clipping) --- */
+  .timeline-section { overflow: visible; }
+  .timeline-track { padding-left: 3rem; overflow: visible; }
+  .timeline-track::before { left: 0.875rem; transform: none; }
+  .tl-item { display: block; padding-left: 1.5rem; margin-bottom: var(--sp-8); overflow: visible; }
+  .tl-item::before { left: -2.125rem; top: 6px; width: 8px; height: 8px; transform: none; }
+  .tl-year { display: block; text-align: left; min-width: unset; font-size: var(--fs-base); padding-right: 0; white-space: nowrap; overflow: visible; margin-bottom: var(--sp-1); }
+  .tl-content { display: block; padding-left: 0; }
   .tl-content h4 { font-size: var(--fs-sm); }
   .tl-content p { font-size: var(--fs-xs); }
 
