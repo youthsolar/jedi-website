@@ -157,18 +157,23 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
 .cf-turnstile {
   margin: var(--sp-4) 0;
   min-height: 65px;
+  width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 .cf-turnstile iframe {
   display: block !important;
   max-width: 100% !important;
-  transform-origin: left top;
+  overflow: visible !important;
 }
-@media (max-width: 400px) {
-  .cf-turnstile iframe {
-    transform: scale(0.85);
-    width: 118% !important;
+@media (max-width: 360px) {
+  .cf-turnstile {
+    zoom: 0.82;
+  }
+}
+@media (min-width: 361px) and (max-width: 430px) {
+  .cf-turnstile {
+    zoom: 0.9;
   }
 }
 
