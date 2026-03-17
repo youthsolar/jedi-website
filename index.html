@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>季達行銷公關 JEDI Marketing PR | Since 2003 — 品牌策略 · 媒體公關 · 整合行銷</title>
-<meta name="description" content="季達行銷公關 JEDI Marketing PR Co., Ltd. — 23年品牌策略、媒體公關、整合行銷經驗。服務超過 60 個品牌客戶，累計媒體預算逾 9,000 萬。">
+<meta name="description" content="季達行銷公關 JEDI Marketing PR Co., Ltd. — 23年品牌策略、媒體公關、整合行銷經驗。服務超過 60 個品牌客戶，累計純媒體預算逾 1.25 億。">
 <meta name="keywords" content="季達,JEDI,行銷公關,品牌策略,媒體公關,整合行銷,AI新聞稿,PR,Marketing">
 <meta property="og:title" content="季達行銷公關 JEDI Marketing PR">
 <meta property="og:description" content="Since 2003 — 邏輯驅動的品牌傳播夥伴">
@@ -118,6 +118,8 @@ body {
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
 button { cursor: pointer; border: none; background: none; font: inherit; }
+
+h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
 
 /* --- UTILITY --- */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
@@ -683,10 +685,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .footer {
   background: var(--c-dark);
   padding: var(--sp-12) 0 var(--sp-8);
+  margin-bottom: 0;
+  border: none;
 }
 .footer-inner {
   display: flex; justify-content: space-between; align-items: start;
-  border-top: 1px solid rgba(255,255,255,0.06);
   padding-top: var(--sp-8);
 }
 .footer-brand {
@@ -834,11 +837,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   /* --- HERO --- */
   .hero { padding-top: 5rem; }
   .hero .heading-1, .heading-1 { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+  .hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); white-space: nowrap; letter-spacing: -0.02em; }
   .hero .subtitle { font-size: var(--fs-sm); }
   .hero .desc { font-size: var(--fs-sm); }
   .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
   .hero-metric { padding: var(--sp-4); }
-  .hero-metric .num { font-size: clamp(1.5rem, 6vw, var(--fs-3xl)); }
+  .hero-metric { padding: 1rem; }
+  .hero-metric .num { font-size: clamp(1.5rem, 6vw, var(--fs-3xl)); margin-bottom: 0.25rem; }
   .hero-metric .label { font-size: 0.65rem; }
   .scroll-hint { display: none; }
 
@@ -1011,8 +1016,8 @@ details[open] .faq-q::after { content: '−'; }
           <div class="label">品牌客戶</div>
         </div>
         <div class="hero-metric">
-          <div class="num">9,000<span>萬+</span></div>
-          <div class="label">累計媒體預算 TWD</div>
+          <div class="num">1.25<span>億+</span></div>
+          <div class="label">累計純媒體預算 TWD</div>
         </div>
         <div class="hero-metric">
           <div class="num">15<span>+</span></div>
@@ -1448,7 +1453,7 @@ details[open] .faq-q::after { content: '−'; }
         <div class="tl-year">2003</div>
         <div class="tl-content">
           <h4>季達行銷公關成立</h4>
-          <p>由杜俊賢創辦，以「邏輯驅動品牌傳播」為核心理念，定位為專業公關行銷顧問公司。</p>
+          <p>由王子嘉創辦，以「邏輯驅動品牌傳播」為核心理念，定位為專業公關行銷顧問公司。</p>
         </div>
       </div>
       <div class="tl-item reveal reveal-d1">
@@ -1462,7 +1467,7 @@ details[open] .faq-q::after { content: '−'; }
         <div class="tl-year">2011–2013</div>
         <div class="tl-content">
           <h4>業務高峰期</h4>
-          <p>年度媒體預算累計逾 9,000 萬，服務品牌超過 60 家，橫跨科技、快消、美妝、金融等 15+ 產業。</p>
+          <p>年度純媒體預算累計逾 1.25 億，服務品牌超過 60 家，橫跨科技、快消、美妝、金融等 15+ 產業。</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1509,10 +1514,6 @@ details[open] .faq-q::after { content: '−'; }
           <li>
             <div class="label">Contact</div>
             <div class="value">Jeffery Wang</div>
-          </li>
-          <li>
-            <div class="label">Established</div>
-            <div class="value">2003</div>
           </li>
           <li>
             <div class="label">AI 新聞稿平台</div>
