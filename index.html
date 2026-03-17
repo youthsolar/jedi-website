@@ -105,7 +105,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
 
 body {
   font-family: 'Noto Sans TC', 'Inter', -apple-system, system-ui, sans-serif;
@@ -113,7 +113,6 @@ body {
   line-height: 1.75;
   font-size: var(--fs-base);
   background: var(--c-surface);
-  overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; }
@@ -837,11 +836,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .hero { padding-top: 5rem; }
   .hero .heading-1, .heading-1 { font-size: 2.25rem; }
   .about.section-pad { padding-bottom: var(--sp-8); }
-  .tl-item { grid-template-columns: auto 1fr; gap: var(--sp-4); }
-  .tl-item::before { left: 0; transform: none; }
-  .timeline-track::before { left: 4px; }
-  .timeline-track { padding-left: var(--sp-8, 2rem); overflow: visible; }
-  .tl-year { text-align: left; padding-right: 0; font-size: var(--fs-base); min-width: 100px; }
+  .timeline-track { padding-left: 3rem; overflow: visible; }
+  .timeline-track::before { left: 0.75rem; transform: none; }
+  .tl-item { grid-template-columns: 1fr; padding-left: 1.5rem; }
+  .tl-item::before { left: -2.25rem; transform: none; }
+  .tl-year { text-align: left; min-width: unset; font-size: 1rem; }
   .tl-content { padding-left: 0; }
 }
 @media (max-width: 480px) {
