@@ -165,8 +165,28 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
   overflow: visible !important;
 }
 
+/* 隱藏右側灰色箭頭 */
+.scroll-hint,
+[class*="scroll-hint"],
+[id*="scrollHint"],
+[class*="scroll-arrow"] {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+  .contact-form {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+  .cf-turnstile {
+    max-width: 100%;
+    overflow: visible;
+  }
   .form-row { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .nav-hamburger { display: block; }
