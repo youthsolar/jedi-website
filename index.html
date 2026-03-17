@@ -571,7 +571,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ============================
    TIMELINE
    ============================ */
-.timeline-section { background: var(--c-dark); }
+.timeline-section { background: var(--c-dark); overflow: visible; }
 .timeline-header { text-align: center; margin-bottom: var(--sp-16); }
 .timeline-header .heading-2 { color: #fff; }
 .timeline-header .sub { color: rgba(255,255,255,0.35); margin: var(--sp-3) auto 0; }
@@ -836,8 +836,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .tl-item { grid-template-columns: auto 1fr; gap: var(--sp-4); }
   .tl-item::before { left: 0; transform: none; }
   .timeline-track::before { left: 4px; }
-  .timeline-track { padding-left: var(--sp-6); }
-  .tl-year { text-align: left; padding-right: 0; font-size: var(--fs-base); min-width: 90px; }
+  .timeline-track { padding-left: var(--sp-8, 2rem); overflow: visible; }
+  .tl-year { text-align: left; padding-right: 0; font-size: var(--fs-base); min-width: 100px; }
   .tl-content { padding-left: 0; }
 }
 @media (max-width: 480px) {
