@@ -833,6 +833,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .modal-hero-img { height: 200px; }
   .footer-inner { flex-direction: column; gap: var(--sp-6); }
   .footer-copy { text-align: left; }
+  .scroll-hint { display: none; }
+  .hero { padding-top: 5rem; }
+  .hero .heading-1, .heading-1 { font-size: 2.25rem; }
+  .about.section-pad { padding-bottom: var(--sp-8); }
   .tl-item { grid-template-columns: auto 1fr; gap: var(--sp-4); }
   .tl-item::before { left: 0; transform: none; }
   .timeline-track::before { left: 4px; }
@@ -1066,6 +1070,11 @@ details[open] .faq-q::after { content: '−'; }
     </div>
 
     <div class="services-grid">
+      <div class="svc-card svc-featured reveal">
+        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9889;</div>
+        <h3 class="heading-3">AI 智能新聞稿發送平台 <span class="svc-badge">NEW 2025</span></h3>
+        <p>AI 媒體配對引擎自動匹配最適記者、一鍵發稿追蹤、開信率即時分析、每週成效報告自動生成。</p>
+      </div>
       <div class="svc-card reveal">
         <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9733;</div>
         <h3 class="heading-3">品牌策略與媒體公關</h3>
@@ -1095,11 +1104,6 @@ details[open] .faq-q::after { content: '−'; }
         <div class="svc-icon" style="background:rgba(68,64,60,0.06); color:var(--c-ink-60);">&#9635;</div>
         <h3 class="heading-3">展覽空間與製作物設計</h3>
         <p>展覽 VIP Room 空間規劃、3D 佈置設計、背板製作、場刊印刷、識別證系統。</p>
-      </div>
-      <div class="svc-card svc-featured reveal">
-        <div class="svc-icon" style="background:var(--c-accent-soft); color:var(--c-accent);">&#9889;</div>
-        <h3 class="heading-3">AI 智能新聞稿發送平台 <span class="svc-badge">NEW 2025</span></h3>
-        <p>AI 媒體配對引擎自動匹配最適記者、一鍵發稿追蹤、開信率即時分析、每週成效報告自動生成。</p>
       </div>
     </div>
 
@@ -1561,17 +1565,9 @@ details[open] .faq-q::after { content: '−'; }
 <!-- ====== FOOTER ====== -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">JEDI</div>
-        <div class="footer-sub">
-          季達行銷公關有限公司<br>
-          品牌策略 · 媒體公關 · 整合行銷 · AI 新聞稿發送平台
-        </div>
-      </div>
+    <div class="footer-inner" style="justify-content:center; text-align:center;">
       <div class="footer-copy">
-        &copy; 2003–2026 季達行銷公關<br>
-        JEDI Marketing PR Co., Ltd.
+        &copy; 2003–2026 JEDI Marketing PR Co., Ltd. All rights reserved.
       </div>
     </div>
   </div>
