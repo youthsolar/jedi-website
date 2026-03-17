@@ -153,6 +153,18 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
 .mobile-menu a { color: rgba(255,255,255,0.7); font-size: var(--fs-lg); font-weight: 500; letter-spacing: 0.08em; }
 .mobile-close { position: absolute; top: var(--sp-6); right: var(--sp-6); color: #fff; font-size: 1.5rem; cursor: pointer; border: none; background: none; }
 
+/* Turnstile 修正 */
+.cf-turnstile {
+  margin: var(--sp-4) 0;
+  min-height: 65px;
+}
+.cf-turnstile iframe {
+  display: block !important;
+  width: 100% !important;
+  max-width: 300px;
+  overflow: visible !important;
+}
+
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
