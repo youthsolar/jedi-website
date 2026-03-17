@@ -162,6 +162,7 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
   .footer-copy { text-align: left; }
 }
 </style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -220,47 +221,56 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
 
       <div class="contact-form">
         <h3>線上諮詢</h3>
-        <form action="https://formspree.io/f/xpwzgkbj" method="POST">
+        <form id="contactForm">
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">姓名 *</label>
-              <input type="text" id="name" name="name" required placeholder="您的姓名">
+              <label for="lastName">姓 *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="王">
             </div>
+            <div class="form-group">
+              <label for="firstName">名 *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="大明">
+            </div>
+          </div>
+          <div class="form-row">
             <div class="form-group">
               <label for="company">公司名稱</label>
               <input type="text" id="company" name="company" placeholder="公司或品牌名稱">
             </div>
-          </div>
-          <div class="form-row">
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="_replyto" required placeholder="your@email.com">
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
             </div>
+          </div>
+          <div class="form-row">
             <div class="form-group">
               <label for="phone">電話</label>
               <input type="tel" id="phone" name="phone" placeholder="聯絡電話">
             </div>
-          </div>
-          <div class="form-group">
-            <label for="service">感興趣的服務</label>
-            <select id="service" name="service">
-              <option value="">請選擇...</option>
-              <option value="media-pr">媒體公關策略</option>
-              <option value="press-release">新聞稿撰寫與發稿</option>
-              <option value="brand-event">品牌活動企劃</option>
-              <option value="digital-marketing">數位整合行銷</option>
-              <option value="corporate-pr">企業公關與會議策劃</option>
-              <option value="crm">CRM 與資料庫行銷</option>
-              <option value="ai-2pr">AI 新聞稿平台 (2pr.ai)</option>
-              <option value="other">其他</option>
-            </select>
+            <div class="form-group">
+              <label for="service">感興趣的服務</label>
+              <select id="service" name="service">
+                <option value="">請選擇...</option>
+                <option value="media-pr">媒體公關策略</option>
+                <option value="press-release">新聞稿撰寫與發稿</option>
+                <option value="brand-event">品牌活動企劃</option>
+                <option value="digital-marketing">數位整合行銷</option>
+                <option value="corporate-pr">企業公關與會議策劃</option>
+                <option value="crm">CRM 與資料庫行銷</option>
+                <option value="ai-2pr">AI 新聞稿平台 (2pr.ai)</option>
+                <option value="other">其他</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
             <label for="message">訊息內容 *</label>
             <textarea id="message" name="message" required placeholder="請簡述您的需求或想了解的服務..."></textarea>
           </div>
-          <input type="hidden" name="_subject" value="季達官網 — 新諮詢表單">
-          <button type="submit" class="btn-submit">送出諮詢 &rarr;</button>
+          <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>
+          <div style="margin-top:var(--sp-4);">
+            <button type="submit" class="btn-submit">送出諮詢 &rarr;</button>
+          </div>
         </form>
       </div>
     </div>
@@ -290,6 +300,36 @@ a { text-decoration: none; color: inherit; transition: color var(--t-fast); }
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('active');
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  if (this.elements.website.value) return;
+  var form = this;
+  var btn = form.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.textContent = '送出中...';
+  var data = {
+    lastName: form.lastName.value,
+    firstName: form.firstName.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    company: form.company.value,
+    service: form.service.value,
+    message: form.message.value
+  };
+  fetch('https://n8n.winds.tw/webhook/jedi-contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(function(res) {
+    if (!res.ok) throw new Error('fail');
+    form.closest('.contact-form').innerHTML = '<div style="text-align:center;padding:var(--sp-16) 0;"><p style="font-size:var(--fs-xl);color:var(--c-ink);font-weight:600;">&#10003; 已收到您的訊息</p><p style="margin-top:var(--sp-4);color:var(--c-ink-60);">我們將在 24 小時內與您聯繫。</p></div>';
+  }).catch(function() {
+    alert('送出失敗，請直接撥打 +886-922-790-873');
+    btn.disabled = false;
+    btn.textContent = '送出諮詢 →';
+  });
+});
 </script>
 </body>
 </html>
