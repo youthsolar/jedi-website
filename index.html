@@ -256,7 +256,7 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
 .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-accent-light); animation: pulse 2s ease-in-out infinite; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-.hero h1 { color: #fff; margin-bottom: var(--sp-4); }
+.hero h1 { color: #fff; margin-bottom: var(--sp-4); white-space: nowrap; font-size: clamp(2.5rem, 5vw, 4rem); }
 .hero h1 .gold { color: var(--c-accent-light); }
 .hero .subtitle {
   font-family: 'Inter', sans-serif;
@@ -341,7 +341,9 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
 .story-band {
   background: var(--c-dark);
   padding: var(--sp-20) 0;
+  padding-top: var(--sp-16);
   border-top: 1px solid rgba(255,255,255,0.04);
+  margin-top: var(--sp-16);
 }
 .story-inner { max-width: 680px; margin: 0 auto; text-align: center; }
 .story-band blockquote {
@@ -684,13 +686,14 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
    ============================ */
 .footer {
   background: var(--c-dark);
-  padding: var(--sp-12) 0 var(--sp-8);
+  padding: var(--sp-8) 0;
   margin-bottom: 0;
   border: none;
+  min-height: unset;
 }
 .footer-inner {
   display: flex; justify-content: space-between; align-items: start;
-  padding-top: var(--sp-8);
+  padding-top: var(--sp-4);
 }
 .footer-brand {
   font-family: 'Noto Serif TC', serif;
@@ -837,7 +840,7 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
   /* --- HERO --- */
   .hero { padding-top: 5rem; }
   .hero .heading-1, .heading-1 { font-size: clamp(1.75rem, 8vw, 2.25rem); }
-  .hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); white-space: nowrap; letter-spacing: -0.02em; }
+  .hero h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); white-space: nowrap; letter-spacing: -0.03em; }
   .hero .subtitle { font-size: var(--fs-sm); }
   .hero .desc { font-size: var(--fs-sm); }
   .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
@@ -845,10 +848,10 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
   .hero-metric { padding: 1rem; }
   .hero-metric .num { font-size: clamp(1.5rem, 6vw, var(--fs-3xl)); margin-bottom: 0.25rem; }
   .hero-metric .label { font-size: 0.65rem; }
-  .scroll-hint { display: none; }
+  .scroll-hint, [class*="scroll"], [id*="scroll"] { display: none !important; }
 
   /* --- STORY BAND: reduce padding --- */
-  .story-band { padding: var(--sp-10) 0; }
+  .story-band { padding: var(--sp-10) 0; padding-top: var(--sp-16); }
   .story-band blockquote { font-size: clamp(var(--fs-base), 4vw, var(--fs-lg)); line-height: 2; }
 
   /* --- ABOUT --- */
@@ -893,6 +896,7 @@ h1, h2, h3 { font-family: 'Noto Serif TC', serif; }
   .faq-a { padding: 0 var(--sp-4) var(--sp-4); }
 
   /* --- FOOTER --- */
+  .footer { padding: var(--sp-6) var(--sp-4); min-height: unset; }
   .footer-inner { flex-direction: column; gap: var(--sp-6); }
   .footer-copy { text-align: left; }
 
