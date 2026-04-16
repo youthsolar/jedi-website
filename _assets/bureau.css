@@ -163,10 +163,19 @@ a:hover { color: var(--brass-bright); }
 }
 
 @media (max-width: 900px) {
-  .nav__menu { display: none; width: 100%; flex-direction: column; gap: var(--s-sm); padding-top: var(--s-md); border-top: 0.5px solid var(--hairline); }
+  .nav__menu { display: none; width: 100%; flex-direction: column; gap: var(--s-sm); padding-top: var(--s-md); border-top: 0.5px solid var(--hairline); order: 99; }
   .nav__menu.is-open { display: flex; }
   .nav__toggle { display: inline-flex; }
   .nav__cta .btn { padding: 8px 14px; font-size: var(--t-meta); }
+}
+
+@media (max-width: 560px) {
+  .nav__inner { gap: var(--s-sm); }
+  .logo { font-size: 16px; }
+  .nav__cta { gap: var(--s-sm); }
+  .nav__cta .btn { padding: 6px 10px; font-size: var(--t-micro); }
+  /* On phones, drop the secondary "聯絡 / +886-" ghost button to save room — primary CTA + hamburger only */
+  .nav__cta .btn--ghost { display: none; }
 }
 
 /* Buttons */
