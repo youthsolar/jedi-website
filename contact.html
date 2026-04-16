@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/_assets/bureau.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <style>
   .page-hero {
@@ -165,7 +166,22 @@
   }
   .btn-submit:hover { background: var(--brass-bright); transform: translateY(-1px); }
   .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+  .turnstile-wrap {
+    margin-top: var(--s-md);
+    padding-top: var(--s-md);
+    border-top: 0.5px dashed var(--hairline);
+    display: flex;
+    justify-content: flex-start;
+    min-height: 72px;
+  }
+  .turnstile-wrap .cf-turnstile { max-width: 100%; overflow: hidden; }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .turnstile-wrap { justify-content: center; }
+    .turnstile-wrap .cf-turnstile iframe { max-width: 100% !important; }
+  }
 
   .success-msg {
     text-align: center;
@@ -314,6 +330,9 @@
             <label for="message">訊息內容 *</label>
             <textarea id="message" name="message" required placeholder="請簡述您的需求或想了解的服務..."></textarea>
           </div>
+          <div class="turnstile-wrap">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACr-YssthD0hpIGw" data-theme="auto"></div>
+          </div>
           <div style="margin-top: var(--s-md);">
             <button type="submit" class="btn-submit">送出諮詢 →</button>
           </div>
@@ -365,6 +384,14 @@
     if (this.elements.website.value) return;
     var form = this;
     var btn = form.querySelector('.btn-submit');
+
+    var tsField = form.querySelector('input[name="cf-turnstile-response"]');
+    var tsToken = tsField ? tsField.value : '';
+    if (!tsToken) {
+      alert('請先完成「我不是機器人」驗證');
+      return;
+    }
+
     btn.disabled = true;
     btn.textContent = '送出中...';
     var data = {
@@ -374,7 +401,8 @@
       phone: form.phone.value,
       company: form.company.value,
       service: form.service.value,
-      message: form.message.value
+      message: form.message.value,
+      turnstileToken: tsToken
     };
     fetch('https://n8n.winds.tw/webhook/jedi-contact', {
       method: 'POST',
@@ -387,6 +415,7 @@
       alert('送出失敗，請直接撥打 +886-922-790-873');
       btn.disabled = false;
       btn.textContent = '送出諮詢 →';
+      if (window.turnstile) window.turnstile.reset();
     });
   });
 </script>
