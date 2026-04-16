@@ -406,7 +406,7 @@
       message: form.message.value,
       turnstileToken: tsToken
     };
-    fetch('https://n8n.winds.tw/webhook/jedi-contact', {
+    fetch('https://uneedwind.app.n8n.cloud/webhook/jedi-contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
