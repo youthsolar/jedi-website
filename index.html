@@ -181,9 +181,50 @@
   @media (max-width: 880px) { .services { grid-template-columns: 1fr; } }
   @media (max-width: 880px) and (min-width: 600px) { .services { grid-template-columns: 1fr 1fr; } }
 
-  /* Cases list */
+  /* Cases list — override bureau.css to include thumbnail */
+  .cases .case {
+    grid-template-columns: 140px 72px 1.4fr 1fr 1fr;
+    gap: var(--s-md);
+    align-items: center;
+  }
+  .case__thumb {
+    display: block;
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border: 0.5px solid var(--hairline);
+    background: var(--surface);
+    transition: filter 200ms var(--ease-paper), transform 200ms var(--ease-paper);
+  }
+  .case:hover .case__thumb { filter: saturate(1.1) contrast(1.05); transform: scale(1.02); }
+  [data-theme="dark"] .case__thumb { filter: brightness(0.85) contrast(1.1); }
+  [data-theme="dark"] .case:hover .case__thumb { filter: brightness(0.95) contrast(1.15); }
   .case__meta { font-family: var(--font-mono); font-size: var(--t-meta); color: var(--dust); text-transform: none; }
   .case__client { font-family: var(--font-sans-en); font-size: var(--t-meta); color: var(--dust); letter-spacing: 0.04em; text-transform: uppercase; }
+  @media (max-width: 880px) {
+    .cases .case {
+      grid-template-columns: 100px 1fr;
+      gap: var(--s-md);
+      grid-template-areas:
+        "thumb year"
+        "thumb title"
+        "thumb client"
+        "thumb metric";
+    }
+    .case__thumb { grid-area: thumb; width: 100px; height: 100px; align-self: start; }
+    .case > .case__year { grid-area: year; }
+    .case > div:nth-child(3) { grid-area: title; }
+    .case > .case__client { grid-area: client; }
+    .case > .case__metric { grid-area: metric; text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .cases .case {
+      grid-template-columns: 1fr;
+      grid-template-areas: "thumb" "year" "title" "client" "metric";
+    }
+    .case__thumb { width: 100%; height: 180px; }
+  }
+
   .filters {
     display: flex; gap: var(--s-sm); flex-wrap: wrap;
     padding: var(--s-md) 0;
@@ -536,6 +577,7 @@
 
     <div class="cases" id="casesList">
       <div class="case" data-cat="launch">
+        <img class="case__thumb" loading="lazy" src="images/01_變形金剛_Transformers/活動現場_握手會_01.jpg" alt="變形金剛 3 通路握手會現場">
         <div class="case__year">2011</div>
         <div>
           <div class="case__title">變形金剛 3 通路握手會</div>
@@ -545,6 +587,7 @@
         <div class="case__metric">消費者接觸 46,630+ 人</div>
       </div>
       <div class="case" data-cat="brand">
+        <img class="case__thumb" loading="lazy" src="images/02_美妝_StClare_Garnier/聖克萊爾_926世界無刺日_01.jpg" alt="聖克萊爾 926 世界無刺日">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">聖克萊爾 926 世界無刺日</div>
@@ -554,6 +597,7 @@
         <div class="case__metric">產品銷售突破 60 萬組</div>
       </div>
       <div class="case" data-cat="corporate">
+        <img class="case__thumb" loading="lazy" src="images/03_企業公關_AIG_黑松_殼牌/AIG友邦_榮譽會_01.jpg" alt="AIG 友邦榮譽會">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">AIG 友邦「Speed to Success」榮譽會</div>
@@ -563,6 +607,7 @@
         <div class="case__metric">大型表揚晚會</div>
       </div>
       <div class="case" data-cat="exhibition">
+        <img class="case__thumb" loading="lazy" src="images/04_鴻海_Foxconn_Computex/VIP_Room_會議區_01.jpg" alt="FOXCONN Computex VIP Room">
         <div class="case__year">2011</div>
         <div>
           <div class="case__title">FOXCONN Computex VIP Room</div>
@@ -572,6 +617,7 @@
         <div class="case__metric">VIP 接待室</div>
       </div>
       <div class="case" data-cat="brand">
+        <img class="case__thumb" loading="lazy" src="images/02_美妝_StClare_Garnier/卡尼爾_PURE整合行銷_01.jpg" alt="卡尼爾 PURE 整合行銷">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">卡尼爾 PURE 整合行銷案</div>
@@ -581,6 +627,7 @@
         <div class="case__metric">線上線下整合</div>
       </div>
       <div class="case" data-cat="corporate">
+        <img class="case__thumb" loading="lazy" src="images/05_SingTel_高爾夫/Golf_Day_入場報到_01.jpg" alt="SingTel 高爾夫聯誼賽">
         <div class="case__year">2011</div>
         <div>
           <div class="case__title">SingTel 高爾夫球聯誼賽</div>
@@ -590,6 +637,7 @@
         <div class="case__metric">出席率 87.5%</div>
       </div>
       <div class="case" data-cat="brand">
+        <img class="case__thumb" loading="lazy" src="images/06_是方傢飾_Arteriors/記者會_主視覺背板_01.jpg" alt="是方國際傢飾記者會">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">是方國際傢飾記者會暨 VIP 之夜</div>
@@ -599,6 +647,7 @@
         <div class="case__metric">雙場次品牌發表</div>
       </div>
       <div class="case" data-cat="digital">
+        <img class="case__thumb" loading="lazy" src="images/07_資生堂_Shiseido/IG操作_品牌參考_01.png" alt="資生堂東京櫃社群操作">
         <div class="case__year">2017</div>
         <div>
           <div class="case__title">資生堂東京櫃社群媒體操作</div>
@@ -608,6 +657,7 @@
         <div class="case__metric">最高單則曝光 15,888 次</div>
       </div>
       <div class="case" data-cat="corporate">
+        <img class="case__thumb" loading="lazy" src="images/09_尾牙活動_Party/尾牙活動_現場_01.png" alt="美強生醫學研討會">
         <div class="case__year">2010–14</div>
         <div>
           <div class="case__title">美強生北中南醫學研討會</div>
@@ -617,6 +667,7 @@
         <div class="case__metric">年度定期舉辦</div>
       </div>
       <div class="case" data-cat="corporate">
+        <img class="case__thumb" loading="lazy" src="images/03_企業公關_AIG_黑松_殼牌/黑松_經銷商晚會_01.jpg" alt="黑松經銷商晚會">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">黑松經銷商歲末酬賓晚會</div>
@@ -626,6 +677,7 @@
         <div class="case__metric">品牌感恩與通路激勵</div>
       </div>
       <div class="case" data-cat="corporate">
+        <img class="case__thumb" loading="lazy" src="images/03_企業公關_AIG_黑松_殼牌/殼牌_榮耀之旅_01.jpg" alt="殼牌榮耀之旅">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">殼牌「榮耀之旅」經銷商大會</div>
@@ -635,6 +687,7 @@
         <div class="case__metric">經銷商年會</div>
       </div>
       <div class="case" data-cat="digital">
+        <img class="case__thumb" loading="lazy" src="images/08_網路行銷_Kraft_台啤/卡夫_美味時光_活動頁_01.jpg" alt="卡夫美味時光">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">卡夫美味時光 / 台啤刮刮卡</div>
@@ -644,6 +697,7 @@
         <div class="case__metric">整合 CRM 系統</div>
       </div>
       <div class="case" data-cat="launch">
+        <img class="case__thumb" loading="lazy" src="images/03_企業公關_AIG_黑松_殼牌/經銷商大會_活動照_01.jpg" alt="Bacardi Asti 賣場促銷">
         <div class="case__year">—</div>
         <div>
           <div class="case__title">Bacardi Asti 全省賣場促銷</div>
