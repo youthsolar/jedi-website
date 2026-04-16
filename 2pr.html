@@ -3,159 +3,374 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2PR.ai — AI 智能新聞稿發送平台 | Coming Soon</title>
-<meta name="description" content="2PR.ai — AI 智能新聞稿發送平台，即將上線，敬請期待。">
+<title>2PR.ai — JEDI Marketing PR 20 年媒體資產的 AI 轉型｜季達行銷公關</title>
+<meta name="description" content="2PR.ai 是 JEDI Marketing PR（季達行銷公關 2002-2018）20 年台灣媒體關係的 AI-native 轉型成果。從 60+ 品牌實戰經驗，打造專為 B2B 科技/製造/生技新品上市設計的精準投遞平台。">
+<link rel="canonical" href="https://jedi.net.tw/2pr.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="2PR.ai — JEDI 20 年媒體關係的 AI 轉型">
+<meta property="og:description" content="從 2002 年 JEDI Marketing PR 到 2026 年 2PR.ai。20 年台灣媒體關係，AI 化。">
+<meta property="og:url" content="https://jedi.net.tw/2pr.html">
+<meta property="og:image" content="https://2pr.ai/og-default.png">
+<meta property="og:locale" content="zh_TW">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://2pr.ai/og-default.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "從 JEDI 到 2PR.ai：20 年媒體關係的 AI 轉型",
+  "author": { "@type": "Person", "name": "王子嘉 Jeffery Wang", "jobTitle": "JEDI Marketing PR 創辦人 / 2PR.ai Founder" },
+  "publisher": { "@type": "Organization", "name": "JEDI Marketing PR", "url": "https://jedi.net.tw/" },
+  "datePublished": "2026-04-16",
+  "mainEntityOfPage": "https://jedi.net.tw/2pr.html",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "2PR.ai",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://2pr.ai"
+  }
+}
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="shortcut icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --c-dark: #1C1917;
-  --c-dark-soft: #292524;
-  --c-accent: #A16207;
-  --c-accent-light: #CA8A04;
-  --c-accent-warm: #D97706;
+  --ink: #F7F2E4;
+  --surface: #ECE4D0;
+  --newsprint: #14110F;
+  --dust: #5C5248;
+  --dust-deep: #8A7E6E;
+  --brass: #8B6508;
+  --brass-bright: #A67810;
+  --cinnabar: #A13308;
+  --moss: #3A4A3F;
+  --hairline: #B8A98F;
 }
-
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
+html { -webkit-font-smoothing: antialiased; }
 body {
-  font-family: 'Noto Sans TC', 'Inter', -apple-system, system-ui, sans-serif;
-  background: var(--c-dark);
-  color: #fff;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
+  font-family: "Noto Serif TC", Georgia, serif;
+  background: var(--ink);
+  color: var(--newsprint);
+  font-size: 17px;
+  line-height: 1.8;
 }
-
 body::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(161,98,7,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 30% 70%, rgba(202,138,4,0.04) 0%, transparent 60%);
-  pointer-events: none;
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 240px;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 64px); position: relative; z-index: 1; }
+
+nav.top {
+  padding: 24px 0;
+  border-bottom: 0.5px solid var(--hairline);
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+}
+nav.top .container { display: flex; justify-content: space-between; align-items: center; }
+nav.top a { color: var(--dust); text-decoration: none; margin-left: 24px; }
+nav.top a:hover { color: var(--newsprint); }
+.brand { font-family: "Fraunces", serif; font-weight: 900; font-size: 20px; color: var(--newsprint); text-decoration: none; }
+.brand em { font-style: normal; color: var(--brass); font-weight: 400; }
+
+header.hero { padding: clamp(64px, 10vw, 120px) 0 64px; }
+.kicker {
+  font-family: "Fraunces", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px;
+}
+.kicker::before { content: ''; width: 40px; height: 0.5px; background: var(--brass); }
+h1 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero__sub {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--dust);
+  line-height: 1.6;
+  max-width: 50ch;
 }
 
-body::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 200px;
-  pointer-events: none;
+article { padding: 48px 0 96px; }
+h2 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin: 64px 0 24px;
+  border-top: 0.5px solid var(--hairline);
+  padding-top: 48px;
+  max-width: 20ch;
+}
+h3 { font-size: 22px; margin: 32px 0 12px; font-weight: 700; }
+p { margin-bottom: 24px; }
+p.lede::first-letter {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 4.2em;
+  line-height: 0.9;
+  float: left;
+  margin: 6px 12px 0 0;
+  color: var(--brass);
 }
 
-.wrapper {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 2rem 1.25rem;
-  max-width: 560px;
+.cta-box {
+  margin: 48px 0;
+  padding: 40px;
+  border: 0.5px solid var(--hairline);
+  background: var(--surface);
 }
-
-.logo {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(3rem, 10vw, 5rem);
+.cta-box__label {
+  font-family: "Fraunces", serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 12px;
+}
+.cta-box__title {
+  font-family: "Noto Serif TC", serif;
   font-weight: 700;
-  color: var(--c-accent-light);
-  letter-spacing: 0.06em;
-  line-height: 1;
-  margin-bottom: 1rem;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
-
-.logo span {
-  color: #fff;
-  font-weight: 300;
-}
-
-.subtitle {
-  font-family: 'Noto Serif TC', serif;
-  font-size: clamp(1.125rem, 3vw, 1.5rem);
-  font-weight: 400;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.08em;
-  margin-bottom: 2.5rem;
-}
-
-.coming {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.4);
-  line-height: 2;
-  letter-spacing: 0.04em;
-  margin-bottom: 3rem;
-}
-
-.coming strong {
-  color: rgba(255,255,255,0.6);
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px;
+  font-family: "Fraunces", serif;
   font-weight: 500;
-}
-
-.divider {
-  width: 40px;
-  height: 2px;
-  background: var(--c-accent);
-  margin: 0 auto 2.5rem;
-}
-
-.btn-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  background: var(--c-accent);
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.875rem;
-  border-radius: 9999px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  background: var(--brass);
+  color: var(--ink);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  letter-spacing: 0.04em;
+  border-radius: 2px;
+  border: 0.5px solid var(--brass);
+  transition: all 200ms;
+}
+.btn:hover { background: var(--brass-bright); transform: translateY(-1px); }
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 0.5px solid var(--hairline);
+  border-bottom: 0.5px solid var(--hairline);
+}
+.brand-cell {
+  font-family: "Noto Serif TC", serif;
+  color: var(--dust);
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border-right: 0.5px solid var(--hairline);
+}
+.brand-cell:last-child { border-right: none; }
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 0.5px solid var(--hairline);
+  border-bottom: 0.5px solid var(--hairline);
+}
+.metric {
+  padding: 0 16px;
+  border-right: 0.5px solid var(--hairline);
+}
+.metric:last-child { border-right: none; }
+.metric__label {
+  font-family: "Fraunces", serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust-deep);
+  margin-bottom: 6px;
+}
+.metric__value {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+.metric__value .mono {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  color: var(--brass);
 }
 
-.btn-back:hover {
-  background: var(--c-accent-warm);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(161,98,7,0.4);
+.footnote {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--dust);
+  padding-top: 24px;
+  margin-top: 48px;
+  border-top: 0.5px solid var(--hairline);
 }
+.footnote a { color: var(--brass); }
 
-.pulse-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--c-accent-light);
-  display: inline-block;
-  animation: pulse 2s ease-in-out infinite;
-  margin-right: 0.5rem;
-  vertical-align: middle;
+footer {
+  padding: 32px 0 64px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--dust-deep);
+  border-top: 0.5px solid var(--hairline);
 }
+footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+@media (max-width: 720px) {
+  .brands { grid-template-columns: repeat(2, 1fr); }
+  .metric-row { grid-template-columns: 1fr; }
+  .metric { border-right: none; border-bottom: 0.5px solid var(--hairline); padding: 12px 0; }
+  .metric:last-child { border-bottom: none; }
 }
 </style>
 </head>
 <body>
 
-<div class="wrapper">
-  <div class="logo">2PR<span>.ai</span></div>
-  <div class="subtitle">AI 智能新聞稿發送平台</div>
-  <div class="divider"></div>
-  <div class="coming">
-    <span class="pulse-dot"></span><strong>即將上線，敬請期待</strong><br>
-    Coming Soon
+<nav class="top">
+  <div class="container">
+    <a href="/" class="brand">JEDI <em>Marketing PR</em></a>
+    <div>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/2pr.html">2PR.ai</a>
+    </div>
   </div>
-  <a href="index.html" class="btn-back">&larr; 回到季達主頁</a>
-</div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="kicker">2026 · New Chapter · 新篇章</div>
+    <h1>從 JEDI 到 2PR.ai：20 年媒體關係的 AI 轉型</h1>
+    <p class="hero__sub">From 2002 to 2026 — Two decades of earned media relationships, now powered by AI.</p>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+    <p class="lede">
+      2002 到 2018，JEDI Marketing PR（季達行銷公關）在台灣為超過 60 個品牌操刀新品上市、媒體公關與整合行銷——Samsung、GIGABYTE、AIG、美強生、變形金剛、NERF、TOMTOM、Shell、Foxconn、卡夫食品、台灣 360、技嘉科技……每一個案例都是與台灣媒體圈的一次深度互動，也是對記者工作習慣、題材偏好、版面需求的長期理解。
+    </p>
+
+    <p>
+      那 20 年累積的，不只是 Rolodex 上的名片，更是一位資深公關顧問的直覺：這週該投誰、這個角度誰會寫、某位記者最近關注什麼、哪篇稿哪個 lede 會被剪裁進版面。這份直覺，過去一直住在人腦裡，難以規模化、難以傳承。
+    </p>
+
+    <h2>把 20 年直覺，AI 化</h2>
+
+    <p>
+      2026 年，我們把 JEDI 20 年的媒體互動資產、發稿紀錄、記者回饋、後續露出追蹤——全部結構化、數位化、AI-enabled 化，打造成新的平台：<strong>2PR.ai</strong>。
+    </p>
+
+    <p>
+      它不是另一個新聞稿群發工具。它是一個**AI 讀懂台灣媒體生態的精準投遞系統**：從在地 5,000 位記者中，每次只鎖定這週最可能寫你的 50 位；每則配對附判讀註腳（記者近期題材、歷史互動脈絡、預測反應角度）；發送後 30 天自動追報媒體露出，每則報導給 Media Value 估值。
+    </p>
+
+    <h2>為什麼是 B2B 新品上市</h2>
+
+    <p>
+      JEDI 過往的強項就在 B2B 新品上市：變形金剛 3 全台通路握手會、GIGABYTE 年度整合行銷、美強生北中南醫學研討會、NERF 聯動操作、SingTel Golf Day、FOXCONN Computex VIP Room……每一個 case 都是在「產品要進市場」的當下，用公關能見度放大商業動能。
+    </p>
+
+    <p>
+      2PR.ai 聚焦這個命題：<strong>專為 B2B 科技、製造、生技新創的新品上市打造</strong>。不做危機公關、不做全平台社群代操——把一件事做到極致，讓台灣中小型新創用得起過去只有上市公司能買到的公關級別。
+    </p>
+
+    <div class="cta-box">
+      <div class="cta-box__label">Live now · 已上線</div>
+      <div class="cta-box__title">2PR.ai 已正式對外開放，免費方案終生可發 1 次測試稿</div>
+      <p style="color: var(--dust); margin-bottom: 20px;">
+        前 50 位創始會員享終身 50% 折扣鎖定。
+      </p>
+      <a href="https://2pr.ai/" class="btn">前往 2PR.ai →</a>
+    </div>
+
+    <h2>過往服務過的品牌</h2>
+    <div class="brands">
+      <div class="brand-cell">Samsung</div>
+      <div class="brand-cell">GIGABYTE</div>
+      <div class="brand-cell">AIG</div>
+      <div class="brand-cell">Foxconn</div>
+      <div class="brand-cell">Mead Johnson</div>
+      <div class="brand-cell">Shell</div>
+      <div class="brand-cell">Hasbro</div>
+      <div class="brand-cell">Kraft</div>
+      <div class="brand-cell">NOKIA</div>
+      <div class="brand-cell">SingTel</div>
+      <div class="brand-cell">Unilever</div>
+      <div class="brand-cell">Philips</div>
+    </div>
+
+    <h2>2PR.ai 的 3 個數字</h2>
+    <div class="metric-row">
+      <div class="metric">
+        <div class="metric__label">Avg Coverage</div>
+        <div class="metric__value"><span class="mono">8.3</span> 則</div>
+      </div>
+      <div class="metric">
+        <div class="metric__label">Media Value</div>
+        <div class="metric__value"><span class="mono">NT$</span>80萬</div>
+      </div>
+      <div class="metric">
+        <div class="metric__label">Tracking</div>
+        <div class="metric__value"><span class="mono">30</span> 天</div>
+      </div>
+    </div>
+
+    <h2>關於 JEDI 的未來</h2>
+
+    <p>
+      JEDI Marketing PR 作為實體顧問公司已於 2018 年結束營運。但我們相信 20 年累積的資產不該只是 PDF 檔案——它應該成為下一代台灣 B2B 創業者觸及媒體的基礎設施。
+    </p>
+
+    <p>
+      這就是 2PR.ai。
+    </p>
+
+    <p class="footnote">
+      ¹ 本頁由 JEDI 創辦人王子嘉（Jeffery Wang）親撰。
+      <br>² 2PR.ai 由宇風企管顧問有限公司營運，Jeffery 擔任 Founder。
+      <br>³ JEDI 歷史客戶名錄完整版參見 <a href="index.html">Portfolio 首頁</a>。
+    </p>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <span>© 2026 JEDI Marketing PR · 季達行銷公關</span>
+    <span><a href="https://2pr.ai/" style="color: var(--brass);">2PR.ai</a> · Powered by 20 years of earned media</span>
+  </div>
+</footer>
 
 </body>
 </html>
